@@ -1,0 +1,209 @@
+---
+// About Section - Quiénes Somos - Tailwind grid + CSS personalizado
+---
+
+<section class="py-16 md:py-20 lg:py-24 xl:py-28 bg-bg-cream relative overflow-hidden" id="nosotros">
+  <!-- Logo watermark -->
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] z-0">
+    <img src="/logo/logo2.svg" alt="" class="w-[500px] h-[500px] md:w-[700px] md:h-[700px] object-contain" />
+  </div>
+  
+  <!-- Textura de fondo sutil - CSS personalizado -->
+  <div class="section-texture"></div>
+  
+  <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-6xl relative z-10">
+    <!-- Grid con Tailwind responsive -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-16 items-center">
+      
+      <!-- Columna de texto - Tailwind spacing -->
+      <div class="order-2 lg:order-1 animate-on-scroll text-center lg:text-left">
+        <!-- Título con borde decorativo - CSS personalizado -->
+        <div class="about-title-wrapper mb-6 md:mb-8">
+          <h2 style="font-family: var(--font-display); letter-spacing: 0.02em;" class="text-4xl md:text-5xl lg:text-6xl font-normal text-primary mb-4 leading-none uppercase">
+            Quiénes Somos
+          </h2>
+          <div class="about-accent-line mx-auto lg:mx-0"></div>
+        </div>
+        
+        <!-- Contenido - Tailwind typography -->
+        <div style="font-family: var(--font-body);" class="space-y-4 md:space-y-5 text-base md:text-lg lg:text-xl text-secondary/90 leading-relaxed font-light">
+          <p>
+            <span class="font-bold text-primary">S3A Industrial</span> es una empresa especializada 
+            en el servicio de <span class="text-rust font-semibold">reparación y mantenimiento de sopladores industriales</span>, 
+            con años de experiencia brindando soluciones técnicas de alta calidad.
+          </p>
+          
+          <p>
+            Nuestro equipo de profesionales altamente capacitados se desplaza a su planta 
+            para realizar intervenciones in situ, minimizando los tiempos de inactividad 
+            y asegurando la continuidad operativa de su empresa.
+          </p>
+          
+          <p>
+            Trabajamos con todas las marcas y modelos de sopladores industriales, 
+            ofreciendo diagnósticos precisos, reparaciones integrales y planes de 
+            mantenimiento preventivo adaptados a sus necesidades específicas.
+          </p>
+        </div>
+        
+        <!-- Features list - Tailwind grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-6 mt-8 md:mt-10">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <span class="font-semibold text-primary">Experiencia Comprobada</span>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <span class="font-semibold text-primary">Respuesta Rápida</span>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+              </svg>
+            </div>
+            <span class="font-semibold text-primary">Servicio en Sitio</span>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+            </div>
+            <span class="font-semibold text-primary">Calidad Garantizada</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Columna de imagen - Tailwind utilities -->
+      <div class="order-1 lg:order-2 animate-on-scroll delay-200">
+        <div class="about-image-wrapper">
+          <img 
+            src="/imagenes/imagen2.png" 
+            alt="Equipo S3A Industrial trabajando" 
+            class="rounded-2xl shadow-2xl w-full"
+            loading="lazy"
+          />
+          <!-- Badge flotante - CSS personalizado -->
+          <div class="about-badge">
+            <span class="text-4xl font-bold text-white">10+</span>
+            <span class="text-sm text-gray-200">Años de Experiencia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Textura de fondo sutil - CSS personalizado */
+  .section-texture {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(49, 61, 73, 0.02) 20px,
+        rgba(49, 61, 73, 0.02) 40px
+      );
+    pointer-events: none;
+  }
+  
+  /* Línea de acento decorativa - CSS personalizado */
+  .about-accent-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-rust), var(--color-primary));
+    border-radius: 2px;
+  }
+  
+  /* Feature cards con hover - CSS personalizado */
+  .feature-card {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.875rem;
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  @media (min-width: 768px) {
+    .feature-card {
+      gap: 0.75rem;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(49, 61, 73, 0.15);
+  }
+  
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-steel));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--color-white);
+    transition: transform 0.3s ease;
+  }
+  
+  @media (min-width: 768px) {
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  /* Imagen con badge flotante - CSS personalizado */
+  .about-image-wrapper {
+    position: relative;
+  }
+  
+  .about-badge {
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
+    background: linear-gradient(135deg, var(--color-rust), #7a5248);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(100, 66, 57, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: pulse 3s ease-in-out infinite;
+  }
+  
+  @media (max-width: 768px) {
+    .about-badge {
+      bottom: 1rem;
+      left: 1rem;
+      padding: 1rem;
+    }
+  }
+</style>

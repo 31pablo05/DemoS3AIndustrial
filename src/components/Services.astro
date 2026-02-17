@@ -1,0 +1,431 @@
+---
+// Services Section - Tailwind grid + CSS personalizado inline
+---
+
+<section id="servicios" class="py-16 md:py-20 lg:py-24 xl:py-28 bg-white relative overflow-hidden">
+  <!-- Logo watermark -->
+  <div class="absolute top-1/2 right-0 -translate-y-1/2 pointer-events-none opacity-[0.03] z-0">
+    <img src="/logo/logo2.svg" alt="" class="w-[450px] h-[450px] md:w-[600px] md:h-[600px] object-contain" />
+  </div>
+  
+  <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-6xl relative z-10">
+    
+    <!-- Header de sección - Tailwind text utilities -->
+    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20 animate-on-scroll">
+      <h2 style="font-family: var(--font-display); letter-spacing: 0.02em;" class="text-4xl md:text-5xl lg:text-6xl font-normal text-primary mb-4 md:mb-5 lg:mb-6 leading-none uppercase">
+        Nuestros Servicios
+      </h2>
+      <p style="font-family: var(--font-body);" class="text-base md:text-lg lg:text-xl text-secondary/80 leading-relaxed font-light max-w-2xl mx-auto">
+        Soluciones integrales para el mantenimiento y reparación de sopladores industriales. 
+        Servicio profesional en sitio para mantener su operación funcionando sin interrupciones.
+      </p>
+    </div>
+    
+    <!-- Grid de servicios - Tailwind responsive grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+      
+      <!-- Servicio 1: Reparación -->
+      <div class="services-card animate-on-scroll">
+        <div class="services-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        
+        <h3 class="services-title">
+          Reparación de Sopladores
+        </h3>
+        
+        <p class="services-description">
+          Diagnóstico y reparación integral de sopladores industriales de todas las marcas y modelos. 
+          Identificamos y solucionamos fallas mecánicas, eléctricas y de rendimiento.
+        </p>
+        
+        <ul class="services-features">
+          <li>Diagnóstico preciso de fallas</li>
+          <li>Reparación de componentes mecánicos</li>
+          <li>Corrección de problemas eléctricos</li>
+          <li>Pruebas de funcionamiento</li>
+        </ul>
+        
+        <a href="/contacto" class="services-link">
+          Solicitar servicio
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <!-- Servicio 2: Mantenimiento Preventivo -->
+      <div class="services-card animate-on-scroll delay-200">
+        <div class="services-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+          </svg>
+        </div>
+        
+        <h3 class="services-title">
+          Mantenimiento Preventivo
+        </h3>
+        
+        <p class="services-description">
+          Planes de mantenimiento programado diseñados para evitar paradas no planificadas. 
+          Inspecciones periódicas y ajustes preventivos para maximizar la vida útil de sus equipos.
+        </p>
+        
+        <ul class="services-features">
+          <li>Inspecciones periódicas programadas</li>
+          <li>Lubricación y ajustes</li>
+          <li>Reemplazo de componentes de desgaste</li>
+          <li>Reportes detallados de estado</li>
+        </ul>
+        
+        <a href="/contacto" class="services-link">
+          Solicitar servicio
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <!-- Servicio 3: Mantenimiento Correctivo -->
+      <div class="services-card animate-on-scroll delay-400">
+        <div class="services-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        
+        <h3 class="services-title">
+          Mantenimiento Correctivo
+        </h3>
+        
+        <p class="services-description">
+          Intervención rápida ante fallas inesperadas para minimizar tiempos de inactividad. 
+          Servicio de emergencia disponible para restablecer su operación lo antes posible.
+        </p>
+        
+        <ul class="services-features">
+          <li>Respuesta rápida ante emergencias</li>
+          <li>Técnicos especializados en sitio</li>
+          <li>Solución inmediata de fallas</li>
+          <li>Minimización de tiempos muertos</li>
+        </ul>
+        
+        <a href="/contacto" class="services-link">
+          Solicitar servicio
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- CTA adicional - Tailwind utilities -->
+    <div class="mt-12 md:mt-16 lg:mt-20 text-center animate-on-scroll">
+      <div class="bg-gradient-to-br from-bg-cream to-bg-sand rounded-2xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
+        <h3 style="font-family: var(--font-display); letter-spacing: 0.02em;" class="text-3xl md:text-4xl lg:text-5xl font-normal text-primary mb-4 md:mb-5 leading-none uppercase">
+          ¿Necesita un servicio personalizado?
+        </h3>
+        <p style="font-family: var(--font-body);" class="text-base md:text-lg lg:text-xl text-secondary/90 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed font-light">
+          Contacte con nuestro equipo técnico para evaluar sus necesidades específicas 
+          y diseñar una solución a medida para su operación.
+        </p>
+        <a 
+          href="/contacto" 
+          class="inline-block bg-gradient-to-r from-rust to-primary text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:shadow-xl transition-all hover:-translate-y-1 text-sm md:text-base"
+        >
+          Solicitar Cotización
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ============================================
+   SERVICES SECTION - Cards con efectos personalizados
+   ============================================ */
+
+.services-card {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-light);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .services-card {
+    padding: 2.25rem;
+  }
+}
+
+/* Borde animado */
+.services-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-rust), var(--color-steel));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.services-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover effect - elevación y sombra con nuevos colores */
+.services-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 10px 30px rgba(30, 49, 63, 0.18),
+    0 4px 12px rgba(34, 53, 70, 0.12);
+  border-color: transparent;
+}
+
+/* Ícono del servicio */
+.services-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-steel));
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .services-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.4rem;
+  }
+}
+
+.services-icon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-rust), var(--color-primary));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.services-card:hover .services-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.services-card:hover .services-icon::after {
+  opacity: 0.3;
+}
+
+.services-icon svg {
+  width: 30px;
+  height: 30px;
+  color: var(--color-white);
+  transition: transform 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .services-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.services-card:hover .services-icon svg {
+  transform: scale(1.1);
+}
+
+/* Título del servicio */
+.services-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .services-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-title {
+    font-size: 1.42rem;
+  }
+}
+
+.services-card:hover .services-title {
+  color: var(--color-rust);
+}
+
+/* Descripción */
+.services-description {
+  color: var(--color-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .services-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Lista de características */
+.services-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-features li {
+  padding: 0.35rem 0;
+  padding-left: 1.4rem;
+  position: relative;
+  color: var(--color-secondary);
+  font-size: 0.88rem;
+  transition: color 0.3s ease;
+}
+
+.services-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-rust);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.services-card:hover .services-features li::before {
+  transform: scale(1.2);
+}
+
+/* Botón "Más información" */
+.services-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.65rem;
+  padding: 0.35rem 0;
+  position: relative;
+  transition: gap 0.3s ease;
+  font-size: 0.93rem;
+}
+
+.services-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-rust), var(--color-primary));
+  transition: width 0.3s ease;
+}
+
+.services-link:hover {
+  gap: 0.75rem;
+  color: var(--color-rust);
+}
+
+.services-link:hover::after {
+  width: 100%;
+}
+
+.services-link svg {
+  transition: transform 0.3s ease;
+}
+
+.services-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* Efecto de brillo al pasar el mouse */
+.services-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.services-card:hover::after {
+  left: 100%;
+}
+
+/* Responsive - stacking en mobile */
+@media (max-width: 768px) {
+  .services-card {
+    padding: 1.25rem;
+  }
+  
+  .services-icon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .services-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .services-title {
+    font-size: 1.25rem;
+  }
+}
+</style>

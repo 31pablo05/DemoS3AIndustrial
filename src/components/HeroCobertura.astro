@@ -1,0 +1,68 @@
+---
+// Hero Cobertura - Sección hero para página Cobertura  
+---
+
+<section class="relative min-h-[65vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-black pt-40 lg:pt-44">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="/imagenes/imagen5.webp" alt="Cobertura Nacional" class="w-full h-full object-cover opacity-60" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
+  </div>
+  
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 30% 70%, rgba(204, 163, 115, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(170, 126, 86, 0.1) 0%, transparent 50%);"></div>
+  </div>
+  
+  <!-- Content -->
+  <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-4xl relative z-10">
+    <div class="text-center text-white" style="text-shadow: 0 2px 12px rgba(0,0,0,0.7), 0 4px 24px rgba(0,0,0,0.5);">
+      <!-- Icon -->
+      <div class="w-16 h-16 mx-auto mb-6 bg-golden/20 rounded-full flex items-center justify-center backdrop-blur">
+        <svg class="w-8 h-8 text-golden-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+      </div>
+      
+      <!-- Breadcrumb -->
+      <nav style="font-family: var(--font-body);" class="text-xs md:text-sm mb-6 opacity-90 tracking-wide">
+        <a href="/" class="hover:text-golden-light transition-colors font-medium">Inicio</a>
+        <span class="mx-3">•</span>
+        <span class="text-golden-light font-semibold">Cobertura</span>
+      </nav>
+      
+      <!-- Title -->
+      <h1 style="font-family: var(--font-display); letter-spacing: 0.03em;" class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal mb-8 leading-none uppercase">
+        Cobertura de Servicio
+      </h1>
+      
+      <!-- Subtitle -->
+      <p style="font-family: var(--font-body);" class="text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed font-light">
+        Servicio técnico especializado en sitio. Nos desplazamos directamente 
+        a su planta industrial para garantizar la continuidad de su operación.
+      </p>
+      
+      <!-- Coverage features -->
+      <div style="font-family: var(--font-heading);" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-golden-light mb-1 uppercase tracking-wider">24/7</div>
+          <div class="text-sm opacity-80 uppercase tracking-wide">Respuesta</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-golden mb-1 uppercase tracking-wider">2h</div>
+          <div class="text-sm opacity-80 uppercase tracking-wide">Tiempo máximo</div>  
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-golden-light mb-1 uppercase tracking-wider">100%</div>
+          <div class="text-sm opacity-80 uppercase tracking-wide">Movilidad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Decorative map-like elements -->
+  <div class="absolute top-20 right-20 w-3 h-3 bg-golden-light rounded-full animate-ping"></div>
+  <div class="absolute top-32 right-32 w-2 h-2 bg-golden rounded-full animate-ping delay-500"></div>
+  <div class="absolute bottom-24 left-24 w-4 h-4 bg-rust rounded-full animate-ping delay-1000"></div>
+</section>

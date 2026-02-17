@@ -1,0 +1,70 @@
+﻿---
+import '../styles/global.css';
+import '../styles/animations.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = 'S3A Industrial - Expertos en Sopladores Industriales', 
+  description = 'Servicio especializado en reparación y mantenimiento de sopladores industriales. Atención profesional en sitio.' 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO -->
+    <meta name="keywords" content="sopladores industriales, reparación industrial, mantenimiento preventivo, mantenimiento correctivo, servicios industriales" />
+    <meta name="author" content="S3A Industrial" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    
+    <!-- Google Fonts - Industrial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    
+    <title>{title}</title>
+  </head>
+  <body class="antialiased">
+    <slot />
+    
+    <!-- Script para animaciones en scroll -->
+    <script>
+      // Intersection Observer para animaciones en scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      // Observar todos los elementos con clase animate-on-scroll
+      document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
