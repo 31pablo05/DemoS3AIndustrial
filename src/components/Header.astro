@@ -3,7 +3,7 @@
 ---
 
 <!-- Overlay para el menú mobile -->
-<div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+<div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
 
 <!-- Header industrial con glassmorphism refinado -->
 <header class="fixed w-full top-0 z-50 transition-all duration-500" id="header">
@@ -15,13 +15,11 @@
 
       <!-- ── Logo ── -->
       <a href="/" class="flex items-center gap-3 logo-link group relative z-10 shrink-0">
-        <div class="logo-icon-wrap relative flex items-center justify-center w-11 h-11 lg:w-13 lg:h-13 rounded-xl overflow-hidden shrink-0">
-          <img
-            src="/logo/logo2.svg"
-            alt="S3A Industrial Logo"
-            class="h-10 w-10 lg:h-12 lg:w-12 object-contain transition-transform duration-500 group-hover:scale-110 relative z-10"
-          />
-        </div>
+        <img
+          src="/logo/logo2.svg"
+          alt="S3A Industrial Logo"
+          class="h-14 w-14 lg:h-16 lg:w-16 object-contain transition-transform duration-500 group-hover:scale-110 shrink-0"
+        />
         <div class="flex flex-col leading-none">
           <span class="text-[13px] lg:text-sm font-black text-gray-900 tracking-tight uppercase logo-name">
             S3A Industrial
@@ -93,7 +91,7 @@
       <!-- ── Hamburger Mobile ── -->
       <button
         id="mobile-menu-button"
-        class="hamburger lg:hidden relative z-50 w-11 h-11 flex items-center justify-center rounded-xl transition-all duration-300 focus:outline-none"
+        class="hamburger lg:hidden relative z-50 w-11 h-11 flex items-center justify-center rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#223546]/30"
         aria-label="Abrir menú"
         aria-expanded="false"
       >
@@ -109,82 +107,62 @@
 </header>
 
 <!-- ══════════════════════════════════════════════
-     PANEL LATERAL MOBILE (slide-in desde la derecha)
+     PANEL MOBILE (card flotante compacto)
 ══════════════════════════════════════════════ -->
-<aside id="mobile-panel" class="fixed top-0 right-0 h-full w-[300px] max-w-[88vw] z-50 flex flex-col lg:hidden" aria-hidden="true">
-  
-  <!-- Header del panel -->
-  <div class="panel-header flex items-center justify-between px-5 py-5 border-b border-white/10">
-    <div class="flex items-center gap-2.5">
-      <img src="/logo/logo2.svg" alt="S3A Logo" class="w-9 h-9 object-contain" />
-      <div class="flex flex-col leading-none">
-        <span class="text-xs font-black text-white tracking-tight uppercase">S3A Industrial</span>
-        <span class="text-[9px] text-rust-light font-semibold tracking-widest uppercase mt-0.5">Sopladores y Servicios</span>
-      </div>
-    </div>
-    <button id="panel-close" class="w-9 h-9 flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-200" aria-label="Cerrar menú">
-      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-  </div>
-
-  <!-- Badge "Disponible" -->
-  <div class="px-5 pt-4 pb-0">
-    <div class="available-badge flex items-center gap-2 px-3 py-2 rounded-lg">
-      <span class="w-2 h-2 rounded-full bg-green-400 phone-pulse shrink-0"></span>
-      <span class="text-[11px] font-semibold text-green-300 tracking-wide">Disponible ahora · +1 (234) 567-890</span>
-    </div>
-  </div>
+<aside id="mobile-panel" class="fixed right-4 z-50 w-[280px] flex flex-col lg:hidden rounded-2xl" aria-hidden="true" style="top: 88px;">
 
   <!-- Links de navegación -->
-  <nav class="flex-1 overflow-y-auto px-4 py-4 space-y-1">
+  <nav class="panel-nav px-2 pt-2 pb-2 space-y-0.5">
+
     <a href="/" class="mobile-nav-item" data-page="/">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
       </span>
       <span class="flex-1 text-sm font-semibold">Inicio</span>
-      <svg class="w-4 h-4 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
+
     <a href="/nosotros" class="mobile-nav-item" data-page="/nosotros">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
       </span>
       <span class="flex-1 text-sm font-semibold">Nosotros</span>
-      <svg class="w-4 h-4 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
+
     <a href="/servicios" class="mobile-nav-item" data-page="/servicios">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
       </span>
       <span class="flex-1 text-sm font-semibold">Servicios</span>
-      <svg class="w-4 h-4 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
+
     <a href="/cobertura" class="mobile-nav-item" data-page="/cobertura">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
       </span>
       <span class="flex-1 text-sm font-semibold">Cobertura</span>
-      <svg class="w-4 h-4 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
+
     <a href="/contacto" class="mobile-nav-item" data-page="/contacto">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
       </span>
       <span class="flex-1 text-sm font-semibold">Contacto</span>
-      <svg class="w-4 h-4 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
-  </nav>
 
-  <!-- Footer del panel con CTA -->
-  <div class="panel-footer px-4 py-5 border-t border-white/10 space-y-3">
-    <a href="/contacto" class="panel-cta flex items-center justify-center gap-2.5 py-3.5 rounded-xl font-bold text-white text-sm w-full">
-      <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-      Solicitar Servicio Ahora
-    </a>
-    <a href="tel:+1234567890" class="flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-gray-400 hover:text-white border border-white/10 hover:border-white/20 transition-all duration-300">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-      Llamar ahora
-    </a>
-  </div>
+    <!-- CTA dentro del card -->
+    <div class="pt-1.5 pb-0.5">
+      <a href="/contacto" class="panel-cta flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-white text-sm w-full">
+        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        Solicitar Servicio
+      </a>
+    </div>
+
+  </nav>
 </aside>
 
 <!-- ══════════════════════════════════════════════ CSS ══════════════════════════════════════════════ -->
@@ -226,16 +204,6 @@
   }
 
   /* ── Logo ── */
-  .logo-icon-wrap {
-    background: linear-gradient(135deg, rgba(155,74,42,0.08) 0%, rgba(143,111,81,0.06) 100%);
-    border: 1px solid rgba(155,74,42,0.12);
-    transition: all 0.4s ease;
-  }
-  .logo-link:hover .logo-icon-wrap {
-    background: linear-gradient(135deg, rgba(155,74,42,0.15) 0%, rgba(143,111,81,0.10) 100%);
-    border-color: rgba(155,74,42,0.3);
-    box-shadow: 0 0 20px rgba(155,74,42,0.15);
-  }
   .logo-name {
     background: linear-gradient(135deg, #1a1a1a 0%, #3d2e28 100%);
     -webkit-background-clip: text;
@@ -334,11 +302,21 @@
 
   /* ── Hamburger ── */
   .hamburger {
-    background: rgba(155,74,42,0.07);
-    border: 1px solid rgba(155,74,42,0.15);
+    background: #223546;
+    border: 1px solid #2e4a61;
+    box-shadow: 0 2px 8px rgba(34,53,70,0.25);
   }
-  .hamburger:hover { background: rgba(155,74,42,0.12); border-color: rgba(155,74,42,0.3); }
-  .hamburger.is-open { background: var(--color-rust); border-color: var(--color-rust); }
+  .hamburger:hover {
+    background: #2c4760;
+    border-color: #3a5f7d;
+    box-shadow: 0 4px 14px rgba(34,53,70,0.35);
+    transform: scale(1.05);
+  }
+  .hamburger.is-open {
+    background: #1a2b38;
+    border-color: #223546;
+    box-shadow: 0 2px 10px rgba(34,53,70,0.4);
+  }
   .hamburger-lines {
     display: flex;
     flex-direction: column;
@@ -349,7 +327,7 @@
     display: block;
     height: 2px;
     border-radius: 2px;
-    background: var(--color-rust);
+    background: #ffffff;
     transition: all 0.35s cubic-bezier(0.68,-0.55,0.265,1.55);
     transform-origin: center;
   }
@@ -366,93 +344,75 @@
 
   /* ── Mobile Panel ── */
   #mobile-panel {
-    background: linear-gradient(160deg, #1c1916 0%, #2b211d 100%);
-    box-shadow: -8px 0 40px rgba(0,0,0,0.5);
-    transform: translateX(100%);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 4px 16px rgba(0,0,0,0.08);
+    transform: translateY(-12px) scale(0.96);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), opacity 0.25s ease;
   }
   #mobile-panel.is-open {
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  /* Panel Header */
-  .panel-header { background: rgba(255,255,255,0.04); }
-  .rust-light { color: #d4866e; }
-
-  /* Available badge */
-  .available-badge {
-    background: rgba(74,222,128,0.08);
-    border: 1px solid rgba(74,222,128,0.2);
+  /* Panel nav container */
+  .panel-nav {
+    /* sin estilos extra, el card es el fondo */
   }
 
   /* Mobile Nav Items */
   .mobile-nav-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 11px 12px;
+    gap: 10px;
+    padding: 10px 10px;
     border-radius: 10px;
-    color: rgba(255,255,255,0.7);
+    color: #374151;
     text-decoration: none;
-    transition: all 0.25s ease;
-    border: 1px solid transparent;
+    transition: all 0.2s ease;
     position: relative;
-    overflow: hidden;
-  }
-  .mobile-nav-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(180deg, var(--color-rust), var(--color-primary));
-    border-radius: 0 2px 2px 0;
-    transform: scaleY(0);
-    transition: transform 0.3s ease;
   }
   .mobile-nav-item:hover {
-    background: rgba(155,74,42,0.12);
-    border-color: rgba(155,74,42,0.25);
-    color: #fff;
-    padding-left: 16px;
+    background: #f3f4f6;
+    color: #111827;
   }
-  .mobile-nav-item:hover::before { transform: scaleY(1); }
-  .mobile-nav-item:hover svg:last-child { transform: translateX(3px); color: var(--color-rust); }
+  .mobile-nav-item:hover svg:last-child { opacity: 60; transform: translateX(2px); }
   .mobile-nav-item.active {
-    background: rgba(155,74,42,0.15);
-    border-color: rgba(155,74,42,0.3);
-    color: #fff;
-    padding-left: 16px;
+    background: rgba(155,74,42,0.08);
+    color: var(--color-rust);
+    font-weight: 700;
   }
-  .mobile-nav-item.active::before { transform: scaleY(1); }
+  .mobile-nav-item.active .mobile-nav-icon-wrap {
+    background: rgba(155,74,42,0.15);
+  }
   .mobile-nav-item:active { transform: scale(0.98); }
 
   .mobile-nav-icon-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     border-radius: 8px;
-    background: rgba(255,255,255,0.07);
-    color: var(--color-rust);
+    background: #f3f4f6;
+    color: #223546;
     flex-shrink: 0;
-    transition: background 0.25s ease;
+    transition: background 0.2s ease, color 0.2s ease;
   }
-  .mobile-nav-item:hover .mobile-nav-icon-wrap,
-  .mobile-nav-item.active .mobile-nav-icon-wrap {
-    background: rgba(155,74,42,0.25);
+  .mobile-nav-item:hover .mobile-nav-icon-wrap {
+    background: #e5e7eb;
+    color: #223546;
   }
 
-  /* Panel footer */
-  .panel-footer { background: rgba(0,0,0,0.15); }
   .panel-cta {
-    background: linear-gradient(135deg, var(--rust-dark) 0%, var(--color-rust) 60%, #c06030 100%);
-    box-shadow: 0 4px 16px rgba(155,74,42,0.4);
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #223546 0%, #2e4a61 100%);
+    box-shadow: 0 3px 12px rgba(34,53,70,0.3);
+    transition: all 0.25s ease;
   }
-  .panel-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(155,74,42,0.5); }
+  .panel-cta:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(34,53,70,0.4); }
   .panel-cta:active { transform: scale(0.98); }
 
   /* ── Pulse animations ── */
@@ -467,20 +427,17 @@
   /* ── Scroll padding ── */
   html { scroll-padding-top: 96px; }
 
-  /* ── Transitions de entrada del panel (stagger en links) ── */
-  #mobile-panel .mobile-nav-item {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(1) { animation: slideInItem 0.3s ease 0.08s both; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(2) { animation: slideInItem 0.3s ease 0.13s both; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(3) { animation: slideInItem 0.3s ease 0.18s both; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(4) { animation: slideInItem 0.3s ease 0.23s both; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(5) { animation: slideInItem 0.3s ease 0.28s both; }
+  /* ── Stagger de entrada ── */
+  #mobile-panel .mobile-nav-item { opacity: 1; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(1) { animation: fadeUp 0.25s ease 0.06s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(2) { animation: fadeUp 0.25s ease 0.10s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(3) { animation: fadeUp 0.25s ease 0.14s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(4) { animation: fadeUp 0.25s ease 0.18s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(5) { animation: fadeUp 0.25s ease 0.22s both; }
 
-  @keyframes slideInItem {
-    from { opacity: 0; transform: translateX(16px); }
-    to   { opacity: 1; transform: translateX(0); }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
   /* ── Reducir movimiento ── */
@@ -502,7 +459,6 @@
   const hamburger  = document.getElementById('mobile-menu-button')!;
   const panel      = document.getElementById('mobile-panel')!;
   const overlay    = document.getElementById('mobile-overlay')!;
-  const panelClose = document.getElementById('panel-close')!;
   const header     = document.getElementById('header')!;
 
   // ── Abrir / cerrar panel ──
@@ -529,7 +485,6 @@
   });
 
   overlay.addEventListener('click', closePanel);
-  panelClose.addEventListener('click', closePanel);
 
   // Cerrar con Escape
   document.addEventListener('keydown', (e) => {
