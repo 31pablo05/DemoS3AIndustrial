@@ -2,7 +2,7 @@
 // Coverage Section - Cobertura de servicio - Tailwind + CSS personalizado
 ---
 
-<section id="cobertura" class="py-16 md:py-20 lg:py-24 xl:py-28 bg-bg-cream relative overflow-hidden">
+<section id="cobertura" class="py-20 md:py-24 lg:py-28 xl:py-32 bg-bg-cream relative overflow-hidden">
   <!-- Logo watermark -->
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.035] z-0">
     <img src="/logo/logo2.svg" alt="" class="w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] object-contain" />
@@ -13,13 +13,20 @@
   
   <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-6xl relative z-10">
     
-    <!-- Header - Tailwind text utilities -->
-    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20 animate-on-scroll">
-      <h2 style="font-family: var(--font-display); letter-spacing: 0.02em;" class="text-4xl md:text-5xl lg:text-6xl font-normal text-primary mb-4 md:mb-5 lg:mb-6 leading-none uppercase">
-        Cobertura de Servicio
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14 md:mb-18 lg:mb-20 animate-on-scroll">
+      <!-- Eyebrow -->
+      <div class="cov-eyebrow">
+        <span class="cov-eyebrow-rule"></span>
+        <span class="cov-eyebrow-label">Alcance nacional</span>
+        <span class="cov-eyebrow-rule cov-eyebrow-rule--r"></span>
+      </div>
+      <h2 style="font-family: var(--font-display); letter-spacing: 0.02em;" class="text-4xl md:text-5xl lg:text-6xl font-normal text-primary mb-5 md:mb-6 leading-none uppercase">
+        Cobertura de <em class="text-gradient-gold not-italic">Servicio</em>
       </h2>
+      <div class="cov-title-rule"></div>
       <p style="font-family: var(--font-body);" class="text-base md:text-lg lg:text-xl text-secondary/80 leading-relaxed font-light max-w-2xl mx-auto">
-        Brindamos nuestros servicios en sitio, desplazándonos directamente a su planta industrial 
+        Brindamos nuestros servicios <strong>en sitio</strong>, desplazándonos directamente a su planta industrial 
         para minimizar tiempos de inactividad y garantizar la continuidad de su operación.
       </p>
     </div>
@@ -47,37 +54,37 @@
             ahorrándole tiempo y costos de transporte de equipos.
           </p>
           
-          <!-- Lista de beneficios - Tailwind spacing -->
-          <ul class="space-y-2.5 md:space-y-3">
+          <!-- Lista de beneficios -->
+          <ul class="coverage-benefits-list">
             <li class="coverage-benefit">
-              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
+              <div class="benefit-check">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              </div>
               <span>Atención en su planta industrial</span>
             </li>
             <li class="coverage-benefit">
-              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
+              <div class="benefit-check">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              </div>
               <span>Sin costos de transporte de equipos</span>
             </li>
             <li class="coverage-benefit">
-              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
+              <div class="benefit-check">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              </div>
               <span>Menor tiempo de inactividad</span>
             </li>
             <li class="coverage-benefit">
-              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
+              <div class="benefit-check">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              </div>
               <span>Diagnóstico in situ inmediato</span>
             </li>
             <li class="coverage-benefit">
-              <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Servicio de emergencia disponible</span>
+              <div class="benefit-check">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <span>Servicio de emergencia disponible 24/7</span>
             </li>
           </ul>
         </div>
@@ -140,6 +147,67 @@
 </section>
 
 <style>
+  /* Eyebrow */
+  .cov-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .cov-eyebrow-rule {
+    width: 36px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-golden));
+    border-radius: 2px;
+  }
+  .cov-eyebrow-rule--r {
+    background: linear-gradient(90deg, var(--color-golden), transparent);
+  }
+  .cov-eyebrow-label {
+    font-family: var(--font-heading);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--color-golden-dark);
+  }
+  .cov-title-rule {
+    width: 60px; height: 4px;
+    background: linear-gradient(90deg, var(--color-rust), var(--color-golden), var(--color-golden-light));
+    border-radius: 2px;
+    margin: 0 auto 20px;
+  }
+
+  /* Benefit list */
+  .coverage-benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .coverage-benefit {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-secondary);
+    font-weight: 500;
+  }
+  .benefit-check {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--color-rust), var(--color-golden-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(123,84,51,.25);
+  }
+
   /* Patrón de fondo industrial - CSS personalizado */
   .coverage-pattern {
     position: absolute;

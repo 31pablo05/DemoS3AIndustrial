@@ -232,32 +232,12 @@ footer {
 }
 
 section + footer {
-  margin-top: 6rem !important;
+  margin-top: 0 !important;
 }
 
 /* Espaciado específico para contacto */
 #contacto {
-  margin-bottom: 6rem !important;
-}
-
-@media (min-width: 768px) {
-  section + footer {
-    margin-top: 8rem !important;
-  }
-  
-  #contacto {
-    margin-bottom: 8rem !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  section + footer {
-    margin-top: 10rem !important;
-  }
-  
-  #contacto {
-    margin-bottom: 10rem !important;
-  }
+  margin-bottom: 0 !important;
 }
 
 /* Centrado mejorado para contenido */
@@ -269,6 +249,33 @@ section + footer {
 /* Smooth transitions globales */
 a, button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR - Industrial style
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f1ec;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #aa7e56, #7b5433);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7b5433, #1e313f);
+}
+
+/* ============================================
+   SECTION SEPARATOR
+   ============================================ */
+.section-sep {
+  height: 4px;
+  background: linear-gradient(90deg, transparent 0%, #aa7e56 30%, #cca373 50%, #aa7e56 70%, transparent 100%);
+  border: none;
+  margin: 0;
 }
 
 /* ============================================

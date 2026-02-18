@@ -9,6 +9,9 @@
     <div class="hero-overlay"></div>
   </div>
 
+  <!-- Diagonal accent bar top -->
+  <div class="hero-top-bar"></div>
+
   <!-- Content -->
   <div class="hero-content">
     <div class="container">
@@ -16,6 +19,12 @@
         
         <!-- Text Content -->
         <div class="text-content">
+          <!-- Eyebrow badge -->
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            <span class="hero-eyebrow-text">Servicio Industrial Especializado</span>
+          </div>
+
           <h1 class="hero-title">
             <span class="title-line">Expertos en</span>
             <span class="title-main">Sopladores Industriales</span>
@@ -61,6 +70,29 @@
               Nuestros Servicios
             </a>
           </div>
+
+          <!-- Mobile Stats Strip (visible only on mobile/tablet) -->
+          <div class="mobile-stats">
+            <div class="mobile-stat">
+              <span class="mobile-stat-num">+15</span>
+              <span class="mobile-stat-lbl">Años</span>
+            </div>
+            <div class="mobile-stat-divider"></div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-num">500+</span>
+              <span class="mobile-stat-lbl">Clientes</span>
+            </div>
+            <div class="mobile-stat-divider"></div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-num">24/7</span>
+              <span class="mobile-stat-lbl">Emergencias</span>
+            </div>
+            <div class="mobile-stat-divider"></div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-num">98%</span>
+              <span class="mobile-stat-lbl">Satisfacción</span>
+            </div>
+          </div>
         </div>
 
         <!-- Stats Card -->
@@ -102,6 +134,12 @@
       </div>
     </div>
   </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
 </section>
 
 <style>
@@ -140,12 +178,9 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(13, 24, 33, 0.85) 0%,
-      rgba(30, 49, 63, 0.75) 50%,
-      rgba(30, 49, 63, 0.85) 100%
-    );
+    background:
+      linear-gradient(to right, rgba(13,24,33,0.92) 0%, rgba(13,24,33,0.70) 55%, rgba(30,49,63,0.50) 100%),
+      linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 40%, rgba(0,0,0,0.4) 100%);
   }
 
   /* Content */
@@ -489,5 +524,128 @@
       padding: 0.875rem 1.5rem;
       font-size: 0.9375rem;
     }
+  }
+
+  /* ── TOP BAR ── */
+  .hero-top-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, rgba(170,126,86,.6) 25%, #cca373 50%, rgba(170,126,86,.6) 75%, transparent 100%);
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  /* ── EYEBROW BADGE ── */
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    background: rgba(170,126,86,.12);
+    border: 1px solid rgba(170,126,86,.3);
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(8px);
+  }
+  .hero-eyebrow-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #cca373;
+    animation: pulse-dot 2.5s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: .5; transform: scale(.7); }
+  }
+  .hero-eyebrow-text {
+    font-family: var(--font-heading);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: #cca373;
+  }
+
+  /* ── MOBILE STATS STRIP ── */
+  .mobile-stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 18px 22px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+    margin-top: 1.75rem;
+  }
+  @media (min-width: 1024px) {
+    .mobile-stats { display: none; }
+  }
+  .mobile-stat {
+    flex: 1;
+    text-align: center;
+  }
+  .mobile-stat-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #cca373;
+    letter-spacing: .02em;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .mobile-stat-lbl {
+    display: block;
+    font-family: var(--font-body);
+    font-size: .7rem;
+    color: rgba(255,255,255,.6);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 500;
+  }
+  .mobile-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,.12);
+    flex-shrink: 0;
+  }
+
+  /* ── SCROLL INDICATOR ── */
+  .hero-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+    animation: float-scroll 2.5s ease-in-out infinite;
+  }
+  @keyframes float-scroll {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(6px); }
+  }
+  .scroll-line {
+    width: 1.5px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(204,163,115,.8), transparent);
+    border-radius: 2px;
+  }
+  .scroll-text {
+    font-family: var(--font-heading);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: rgba(204,163,115,.7);
+  }
+  @media (max-width: 640px) {
+    .hero-scroll-indicator { display: none; }
   }
 </style>

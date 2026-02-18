@@ -1,431 +1,472 @@
----
-// Services Section - Tailwind grid + CSS personalizado inline
+﻿---
+// Services Section - Dark industrial premium design
 ---
 
-<section id="servicios" class="py-16 md:py-20 lg:py-24 xl:py-28 bg-white relative overflow-hidden">
+<section id="servicios" class="svc-section">
+  <!-- Ambient orbs -->
+  <div class="svc-orb svc-orb-1"></div>
+  <div class="svc-orb svc-orb-2"></div>
+
+  <!-- Grid texture overlay -->
+  <div class="svc-grid-overlay"></div>
+
   <!-- Logo watermark -->
-  <div class="absolute top-1/2 right-0 -translate-y-1/2 pointer-events-none opacity-[0.03] z-0">
-    <img src="/logo/logo2.svg" alt="" class="w-[450px] h-[450px] md:w-[600px] md:h-[600px] object-contain" />
+  <div class="svc-watermark" aria-hidden="true">
+    <img src="/logo/logo2.svg" alt="" />
   </div>
-  
-  <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-6xl relative z-10">
-    
-    <!-- Header de sección - Tailwind text utilities -->
-    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20 animate-on-scroll">
-      <h2 style="font-family: var(--font-display); letter-spacing: 0.02em;" class="text-4xl md:text-5xl lg:text-6xl font-normal text-primary mb-4 md:mb-5 lg:mb-6 leading-none uppercase">
-        Nuestros Servicios
-      </h2>
-      <p style="font-family: var(--font-body);" class="text-base md:text-lg lg:text-xl text-secondary/80 leading-relaxed font-light max-w-2xl mx-auto">
-        Soluciones integrales para el mantenimiento y reparación de sopladores industriales. 
-        Servicio profesional en sitio para mantener su operación funcionando sin interrupciones.
+
+  <!-- Top golden edge -->
+  <div class="svc-edge-top"></div>
+
+  <div class="svc-container">
+
+    <!-- SECTION HEADER -->
+    <div class="svc-header animate-on-scroll">
+      <div class="svc-eyebrow">
+        <span class="svc-eyebrow-rule"></span>
+        <span class="svc-eyebrow-text">Lo que hacemos</span>
+        <span class="svc-eyebrow-rule svc-eyebrow-rule--r"></span>
+      </div>
+      <h2 class="svc-title">Nuestros <em>Servicios</em></h2>
+      <div class="svc-scratch"></div>
+      <p class="svc-subtitle">
+        Soluciones integrales para el <strong>mantenimiento y reparacion</strong> de sopladores industriales.
+        Servicio profesional <strong>en sitio</strong> para mantener su operacion sin interrupciones.
       </p>
     </div>
-    
-    <!-- Grid de servicios - Tailwind responsive grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-      
-      <!-- Servicio 1: Reparación -->
-      <div class="services-card animate-on-scroll">
-        <div class="services-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+
+    <!-- CARDS GRID -->
+    <div class="svc-grid">
+
+      <!-- Card 1: Reparacion -->
+      <div class="svc-card animate-on-scroll">
+        <div class="svc-card-bar"></div>
+        <div class="svc-card-num">01</div>
+        <div class="svc-card-icon-wrap">
+          <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
         </div>
-        
-        <h3 class="services-title">
-          Reparación de Sopladores
-        </h3>
-        
-        <p class="services-description">
-          Diagnóstico y reparación integral de sopladores industriales de todas las marcas y modelos. 
-          Identificamos y solucionamos fallas mecánicas, eléctricas y de rendimiento.
-        </p>
-        
-        <ul class="services-features">
-          <li>Diagnóstico preciso de fallas</li>
-          <li>Reparación de componentes mecánicos</li>
-          <li>Corrección de problemas eléctricos</li>
+        <h3 class="svc-card-title">Reparacion de Sopladores</h3>
+        <p class="svc-card-desc">Diagnostico y reparacion integral de sopladores industriales de todas las marcas y modelos. Identificamos y solucionamos fallas mecanicas, electricas y de rendimiento.</p>
+        <ul class="svc-list">
+          <li>Diagnostico preciso de fallas</li>
+          <li>Reparacion de componentes mecanicos</li>
+          <li>Correccion de problemas electricos</li>
           <li>Pruebas de funcionamiento</li>
         </ul>
-        
-        <a href="/contacto" class="services-link">
-          Solicitar servicio
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
+        <a href="/contacto" class="svc-link">Solicitar servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
       </div>
-      
-      <!-- Servicio 2: Mantenimiento Preventivo -->
-      <div class="services-card animate-on-scroll delay-200">
-        <div class="services-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+
+      <!-- Card 2: Preventivo (destacada) -->
+      <div class="svc-card svc-card--featured animate-on-scroll">
+        <div class="svc-featured-badge">Mas Solicitado</div>
+        <div class="svc-card-num svc-card-num--light">02</div>
+        <div class="svc-card-icon-wrap svc-card-icon-wrap--light">
+          <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
           </svg>
         </div>
-        
-        <h3 class="services-title">
-          Mantenimiento Preventivo
-        </h3>
-        
-        <p class="services-description">
-          Planes de mantenimiento programado diseñados para evitar paradas no planificadas. 
-          Inspecciones periódicas y ajustes preventivos para maximizar la vida útil de sus equipos.
-        </p>
-        
-        <ul class="services-features">
-          <li>Inspecciones periódicas programadas</li>
-          <li>Lubricación y ajustes</li>
+        <h3 class="svc-card-title svc-card-title--light">Mantenimiento Preventivo</h3>
+        <p class="svc-card-desc svc-card-desc--light">Planes de mantenimiento programado disenados para evitar paradas no planificadas. Inspecciones periodicas y ajustes preventivos para maximizar la vida util de sus equipos.</p>
+        <ul class="svc-list svc-list--light">
+          <li>Inspecciones periodicas programadas</li>
+          <li>Lubricacion y ajustes tecnicos</li>
           <li>Reemplazo de componentes de desgaste</li>
           <li>Reportes detallados de estado</li>
         </ul>
-        
-        <a href="/contacto" class="services-link">
-          Solicitar servicio
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
+        <a href="/contacto" class="svc-link svc-link--light">Solicitar servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
       </div>
-      
-      <!-- Servicio 3: Mantenimiento Correctivo -->
-      <div class="services-card animate-on-scroll delay-400">
-        <div class="services-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+
+      <!-- Card 3: Correctivo -->
+      <div class="svc-card animate-on-scroll">
+        <div class="svc-card-bar"></div>
+        <div class="svc-card-num">03</div>
+        <div class="svc-card-icon-wrap">
+          <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
-        
-        <h3 class="services-title">
-          Mantenimiento Correctivo
-        </h3>
-        
-        <p class="services-description">
-          Intervención rápida ante fallas inesperadas para minimizar tiempos de inactividad. 
-          Servicio de emergencia disponible para restablecer su operación lo antes posible.
-        </p>
-        
-        <ul class="services-features">
-          <li>Respuesta rápida ante emergencias</li>
-          <li>Técnicos especializados en sitio</li>
-          <li>Solución inmediata de fallas</li>
-          <li>Minimización de tiempos muertos</li>
+        <h3 class="svc-card-title">Mantenimiento Correctivo</h3>
+        <p class="svc-card-desc">Intervencion rapida ante fallas inesperadas para minimizar tiempos de inactividad. Servicio de emergencia disponible las 24 horas para restablecer su operacion.</p>
+        <ul class="svc-list">
+          <li>Respuesta rapida ante emergencias</li>
+          <li>Tecnicos especializados en sitio</li>
+          <li>Solucion inmediata de fallas</li>
+          <li>Minimizacion de tiempos muertos</li>
         </ul>
-        
-        <a href="/contacto" class="services-link">
-          Solicitar servicio
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
+        <a href="/contacto" class="svc-link">Solicitar servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
       </div>
     </div>
-    
-    <!-- CTA adicional - Tailwind utilities -->
-    <div class="mt-12 md:mt-16 lg:mt-20 text-center animate-on-scroll">
-      <div class="bg-gradient-to-br from-bg-cream to-bg-sand rounded-2xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
-        <h3 style="font-family: var(--font-display); letter-spacing: 0.02em;" class="text-3xl md:text-4xl lg:text-5xl font-normal text-primary mb-4 md:mb-5 leading-none uppercase">
-          ¿Necesita un servicio personalizado?
-        </h3>
-        <p style="font-family: var(--font-body);" class="text-base md:text-lg lg:text-xl text-secondary/90 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed font-light">
-          Contacte con nuestro equipo técnico para evaluar sus necesidades específicas 
-          y diseñar una solución a medida para su operación.
-        </p>
-        <a 
-          href="/contacto" 
-          class="inline-block bg-gradient-to-r from-rust to-primary text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:shadow-xl transition-all hover:-translate-y-1 text-sm md:text-base"
-        >
-          Solicitar Cotización
-        </a>
+
+    <!-- BOTTOM CTA STRIP -->
+    <div class="svc-cta animate-on-scroll">
+      <div class="svc-cta-content">
+        <div class="svc-cta-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="svc-cta-title">Necesita un servicio personalizado?</h3>
+          <p class="svc-cta-text">Contactenos para evaluar sus necesidades y disenlar una solucion a medida para su operacion industrial.</p>
+        </div>
       </div>
+      <a href="/contacto" class="svc-cta-btn">Solicitar Cotizacion <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></a>
     </div>
   </div>
+
+  <!-- Bottom golden edge -->
+  <div class="svc-edge-bottom"></div>
 </section>
 
 <style>
-/* ============================================
-   SERVICES SECTION - Cards con efectos personalizados
-   ============================================ */
-
-.services-card {
-  background: var(--color-white);
-  border-radius: 12px;
-  padding: 1.8rem;
+.svc-section {
   position: relative;
+  padding: 110px 0 120px;
   overflow: hidden;
-  border: 1px solid var(--color-gray-light);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(170deg, #13202a 0%, #1a2d3a 40%, #1e3040 70%, #141f27 100%);
+  color: #fff;
 }
-
-@media (min-width: 768px) {
-  .services-card {
-    padding: 2.25rem;
-  }
+.svc-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
 }
-
-/* Borde animado */
-.services-card::before {
-  content: '';
+.svc-orb-1 {
+  width: 520px; height: 520px;
+  top: -120px; left: -100px;
+  background: radial-gradient(circle, rgba(170,126,86,.14) 0%, transparent 70%);
+}
+.svc-orb-2 {
+  width: 440px; height: 440px;
+  bottom: -80px; right: -80px;
+  background: radial-gradient(circle, rgba(123,84,51,.10) 0%, transparent 70%);
+}
+.svc-grid-overlay {
   position: absolute;
   inset: 0;
-  border-radius: 12px;
-  padding: 2px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-rust), var(--color-steel));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  background:
+    repeating-linear-gradient(90deg, transparent 0px, transparent 79px, rgba(255,255,255,.014) 79px, rgba(255,255,255,.014) 80px),
+    repeating-linear-gradient(0deg, transparent 0px, transparent 79px, rgba(255,255,255,.014) 79px, rgba(255,255,255,.014) 80px);
+  pointer-events: none;
 }
-
-.services-card:hover::before {
-  opacity: 1;
+.svc-watermark {
+  position: absolute;
+  top: 50%; right: -80px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: .04;
 }
-
-/* Hover effect - elevación y sombra con nuevos colores */
-.services-card:hover {
+.svc-watermark img { width: 500px; height: 500px; object-fit: contain; }
+@media(max-width:600px){ .svc-watermark { display: none; } }
+.svc-edge-top, .svc-edge-bottom {
+  position: absolute;
+  left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(170,126,86,.5) 20%, #cca373 50%, rgba(170,126,86,.5) 80%, transparent 100%);
+  pointer-events: none;
+}
+.svc-edge-top { top: 0; }
+.svc-edge-bottom { bottom: 0; opacity: .4; }
+.svc-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+}
+@media(max-width:640px){ .svc-container { padding: 0 20px; } }
+.svc-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 72px;
+}
+.svc-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.svc-eyebrow-rule {
+  width: 36px; height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, #cca373);
+}
+.svc-eyebrow-rule--r {
+  background: linear-gradient(90deg, #cca373, transparent);
+}
+.svc-eyebrow-text {
+  font-family: var(--font-heading);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #cca373;
+}
+.svc-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.0;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.svc-title em {
+  font-style: italic;
+  background: linear-gradient(135deg, #aa7e56, #cca373, #aa7e56);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.svc-scratch {
+  width: 60px; height: 4px;
+  background: linear-gradient(90deg, #7b5433, #aa7e56, #cca373);
+  border-radius: 2px;
+  margin: 0 auto 22px;
+}
+.svc-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(.95rem, 1.5vw, 1.1rem);
+  line-height: 1.75;
+  color: rgba(255,255,255,.62);
+}
+.svc-subtitle strong { color: rgba(255,255,255,.88); font-weight: 600; }
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+@media(max-width:960px) { .svc-grid { grid-template-columns: 1fr; gap: 20px; } }
+@media(min-width:601px) and (max-width:960px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:600px) { .svc-grid { grid-template-columns: 1fr; } }
+.svc-card {
+  position: relative;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 20px;
+  padding: 36px 30px 32px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease, border-color .4s ease, background .4s ease;
+}
+.svc-card:hover {
   transform: translateY(-8px);
-  box-shadow: 
-    0 10px 30px rgba(30, 49, 63, 0.18),
-    0 4px 12px rgba(34, 53, 70, 0.12);
-  border-color: transparent;
+  background: rgba(255,255,255,.07);
+  border-color: rgba(170,126,86,.35);
+  box-shadow: 0 24px 60px rgba(0,0,0,.35), 0 0 0 1px rgba(170,126,86,.15);
 }
-
-/* Ícono del servicio */
-.services-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
+@media(max-width:640px) { .svc-card { padding: 28px 22px 26px; } }
+.svc-card-bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #7b5433, #aa7e56, #cca373);
+  border-radius: 3px 0 0 3px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform .4s cubic-bezier(.22,1,.36,1);
+}
+.svc-card:hover .svc-card-bar { transform: scaleY(1); }
+.svc-card--featured {
+  background: linear-gradient(145deg, #aa7e56 0%, #8b6644 40%, #7b5433 100%);
+  border-color: rgba(204,163,115,.4);
+  box-shadow: 0 16px 48px rgba(123,84,51,.4), 0 4px 16px rgba(0,0,0,.3);
+}
+.svc-card--featured:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(145deg, #b8895e 0%, #9a7350 40%, #8a6040 100%);
+  box-shadow: 0 28px 64px rgba(123,84,51,.5);
+  border-color: rgba(204,163,115,.6);
+}
+.svc-featured-badge {
+  position: absolute;
+  top: 20px; right: 20px;
+  padding: 5px 14px;
+  background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 100px;
+  font-family: var(--font-heading);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+.svc-card-num {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: rgba(170,126,86,.2);
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+  transition: color .4s ease;
+}
+.svc-card:hover .svc-card-num { color: rgba(170,126,86,.4); }
+.svc-card-num--light { color: rgba(255,255,255,.2); }
+@media(max-width:640px) { .svc-card-num { font-size: 2.8rem; } }
+.svc-card-icon-wrap {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: rgba(170,126,86,.15);
+  border: 1px solid rgba(170,126,86,.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.25rem auto;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-steel));
-  position: relative;
-  transition: all 0.4s ease;
+  margin-bottom: 20px;
+  color: #cca373;
+  transition: background .4s ease, transform .4s cubic-bezier(.22,1,.36,1);
 }
-
-@media (min-width: 768px) {
-  .services-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 1.4rem;
-  }
+.svc-card:hover .svc-card-icon-wrap {
+  background: rgba(170,126,86,.22);
+  transform: scale(1.08) rotate(3deg);
 }
-
-.services-icon::after {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--color-rust), var(--color-primary));
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+.svc-card-icon-wrap--light {
+  background: rgba(255,255,255,.15);
+  border-color: rgba(255,255,255,.25);
+  color: #fff;
 }
-
-.services-card:hover .services-icon {
-  transform: scale(1.1) rotate(5deg);
-}
-
-.services-card:hover .services-icon::after {
-  opacity: 0.3;
-}
-
-.services-icon svg {
-  width: 30px;
-  height: 30px;
-  color: var(--color-white);
-  transition: transform 0.4s ease;
-}
-
-@media (min-width: 768px) {
-  .services-icon svg {
-    width: 36px;
-    height: 36px;
-  }
-}
-
-.services-card:hover .services-icon svg {
-  transform: scale(1.1);
-}
-
-/* Título del servicio */
-.services-title {
-  font-size: 1.35rem;
+.svc-card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  transition: color 0.3s ease;
-  line-height: 1.4;
-  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  line-height: 1.3;
+  margin-bottom: 14px;
 }
-
-@media (min-width: 768px) {
-  .services-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .services-title {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .services-title {
-    font-size: 1.42rem;
-  }
-}
-
-.services-card:hover .services-title {
-  color: var(--color-rust);
-}
-
-/* Descripción */
-.services-description {
-  color: var(--color-secondary);
+.svc-card-desc {
+  font-family: var(--font-body);
+  font-size: .95rem;
   line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
+  color: rgba(255,255,255,.58);
+  margin-bottom: 22px;
   flex-grow: 1;
-  text-align: center;
 }
-
-@media (min-width: 768px) {
-  .services-description {
-    font-size: 1.1rem;
-    margin-bottom: 1.75rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .services-description {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-}
-
-/* Lista de características */
-.services-features {
+.svc-card-desc--light { color: rgba(255,255,255,.82); }
+.svc-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-
-.services-features li {
-  padding: 0.35rem 0;
-  padding-left: 1.4rem;
-  position: relative;
-  color: var(--color-secondary);
-  font-size: 0.88rem;
-  transition: color 0.3s ease;
+.svc-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: .88rem;
+  color: rgba(255,255,255,.65);
 }
-
-.services-features li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--color-rust);
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
+.svc-list li::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #aa7e56;
+  flex-shrink: 0;
 }
-
-.services-card:hover .services-features li::before {
-  transform: scale(1.2);
-}
-
-/* Botón "Más información" */
-.services-link {
+.svc-list--light li { color: rgba(255,255,255,.85); }
+.svc-list--light li::before { background: rgba(255,255,255,.7); }
+.svc-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  color: var(--color-primary);
-  font-weight: 600;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #aa7e56;
   text-decoration: none;
-  margin-top: 0.65rem;
-  padding: 0.35rem 0;
-  position: relative;
-  transition: gap 0.3s ease;
-  font-size: 0.93rem;
+  margin-top: auto;
+  padding-top: 4px;
+  transition: gap .3s ease, color .3s ease;
 }
-
-.services-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-rust), var(--color-primary));
-  transition: width 0.3s ease;
+.svc-link:hover { gap: 14px; color: #cca373; }
+.svc-link--light { color: rgba(255,255,255,.85); }
+.svc-link--light:hover { color: #fff; gap: 14px; }
+.svc-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px 40px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(170,126,86,.2);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  flex-wrap: wrap;
 }
-
-.services-link:hover {
-  gap: 0.75rem;
-  color: var(--color-rust);
+@media(max-width:640px) {
+  .svc-cta { padding: 24px 22px; flex-direction: column; align-items: flex-start; }
 }
-
-.services-link:hover::after {
-  width: 100%;
+.svc-cta-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
-
-.services-link svg {
-  transition: transform 0.3s ease;
+@media(max-width:480px) { .svc-cta-content { flex-direction: column; align-items: flex-start; gap: 12px; } }
+.svc-cta-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: rgba(170,126,86,.15);
+  border: 1px solid rgba(170,126,86,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cca373;
+  flex-shrink: 0;
 }
-
-.services-link:hover svg {
-  transform: translateX(4px);
+.svc-cta-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 4px;
 }
-
-/* Efecto de brillo al pasar el mouse */
-.services-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  transition: left 0.6s ease;
+.svc-cta-text {
+  font-family: var(--font-body);
+  font-size: .9rem;
+  color: rgba(255,255,255,.55);
+  line-height: 1.5;
 }
-
-.services-card:hover::after {
-  left: 100%;
+.svc-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #aa7e56 0%, #8b6644 100%);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease;
+  box-shadow: 0 6px 24px rgba(123,84,51,.35);
+  flex-shrink: 0;
 }
-
-/* Responsive - stacking en mobile */
-@media (max-width: 768px) {
-  .services-card {
-    padding: 1.25rem;
-  }
-  
-  .services-icon {
-    width: 56px;
-    height: 56px;
-  }
-  
-  .services-icon svg {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .services-title {
-    font-size: 1.25rem;
-  }
+.svc-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(123,84,51,.45);
+}
+@media(min-width:601px) and (max-width:960px) {
+  .svc-card--featured { grid-column: 1 / -1; }
 }
 </style>

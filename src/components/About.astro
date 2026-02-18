@@ -1,209 +1,418 @@
----
-// About Section - Quiénes Somos - Tailwind grid + CSS personalizado
+﻿---
+// About Section - QuiÃ©nes Somos
 ---
 
-<section class="py-16 md:py-20 lg:py-24 xl:py-28 bg-bg-cream relative overflow-hidden" id="nosotros">
+<section class="about-section" id="nosotros">
   <!-- Logo watermark -->
-  <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] z-0">
-    <img src="/logo/logo2.svg" alt="" class="w-[500px] h-[500px] md:w-[700px] md:h-[700px] object-contain" />
+  <div class="about-watermark" aria-hidden="true">
+    <img src="/logo/logo2.svg" alt="" />
   </div>
-  
-  <!-- Textura de fondo sutil - CSS personalizado -->
-  <div class="section-texture"></div>
-  
-  <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-6xl relative z-10">
-    <!-- Grid con Tailwind responsive -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-16 items-center">
+
+  <!-- Subtle diagonal stripe texture -->
+  <div class="about-texture"></div>
+
+  <div class="about-container">
+    <!-- Grid -->
+    <div class="about-grid">
       
-      <!-- Columna de texto - Tailwind spacing -->
-      <div class="order-2 lg:order-1 animate-on-scroll text-center lg:text-left">
-        <!-- Título con borde decorativo - CSS personalizado -->
-        <div class="about-title-wrapper mb-6 md:mb-8">
-          <h2 style="font-family: var(--font-display); letter-spacing: 0.02em;" class="text-4xl md:text-5xl lg:text-6xl font-normal text-primary mb-4 leading-none uppercase">
-            Quiénes Somos
-          </h2>
-          <div class="about-accent-line mx-auto lg:mx-0"></div>
+      <!-- TEXT COLUMN -->
+      <div class="about-text-col animate-on-scroll">
+        <!-- Eyebrow -->
+        <div class="about-eyebrow">
+          <span class="about-eyebrow-rule"></span>
+          <span class="about-eyebrow-label">Nuestra historia</span>
         </div>
+
+        <h2 class="about-title">QuiÃ©nes<br/><em>Somos</em></h2>
+        <div class="about-accent-line"></div>
         
-        <!-- Contenido - Tailwind typography -->
-        <div style="font-family: var(--font-body);" class="space-y-4 md:space-y-5 text-base md:text-lg lg:text-xl text-secondary/90 leading-relaxed font-light">
+        <div class="about-body">
           <p>
-            <span class="font-bold text-primary">S3A Industrial</span> es una empresa especializada 
-            en el servicio de <span class="text-rust font-semibold">reparación y mantenimiento de sopladores industriales</span>, 
-            con años de experiencia brindando soluciones técnicas de alta calidad.
+            <strong>S3A Industrial</strong> es una empresa especializada en el servicio de 
+            <strong class="about-highlight">reparaciÃ³n y mantenimiento de sopladores industriales</strong>, 
+            con aÃ±os de experiencia brindando soluciones tÃ©cnicas de alta calidad a grandes plantas e industrias.
           </p>
-          
           <p>
             Nuestro equipo de profesionales altamente capacitados se desplaza a su planta 
-            para realizar intervenciones in situ, minimizando los tiempos de inactividad 
+            para realizar intervenciones <em>in situ</em>, minimizando los tiempos de inactividad 
             y asegurando la continuidad operativa de su empresa.
           </p>
-          
           <p>
             Trabajamos con todas las marcas y modelos de sopladores industriales, 
-            ofreciendo diagnósticos precisos, reparaciones integrales y planes de 
-            mantenimiento preventivo adaptados a sus necesidades específicas.
+            ofreciendo diagnÃ³sticos precisos, reparaciones integrales y planes de 
+            mantenimiento preventivo adaptados a sus necesidades.
           </p>
         </div>
         
-        <!-- Features list - Tailwind grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-6 mt-8 md:mt-10">
+        <!-- Features grid -->
+        <div class="about-features">
           <div class="feature-card">
             <div class="feature-icon">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <span class="font-semibold text-primary">Experiencia Comprobada</span>
+            <span>Experiencia Comprobada</span>
           </div>
-          
           <div class="feature-card">
             <div class="feature-icon">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
               </svg>
             </div>
-            <span class="font-semibold text-primary">Respuesta Rápida</span>
+            <span>Respuesta RÃ¡pida</span>
           </div>
-          
           <div class="feature-card">
             <div class="feature-icon">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
               </svg>
             </div>
-            <span class="font-semibold text-primary">Servicio en Sitio</span>
+            <span>Servicio en Sitio</span>
           </div>
-          
           <div class="feature-card">
             <div class="feature-icon">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
               </svg>
             </div>
-            <span class="font-semibold text-primary">Calidad Garantizada</span>
+            <span>Calidad Garantizada</span>
           </div>
         </div>
       </div>
       
-      <!-- Columna de imagen - Tailwind utilities -->
-      <div class="order-1 lg:order-2 animate-on-scroll delay-200">
+      <!-- IMAGE COLUMN -->
+      <div class="about-img-col animate-on-scroll">
         <div class="about-image-wrapper">
           <img 
             src="/imagenes/imagen2.png" 
             alt="Equipo S3A Industrial trabajando" 
-            class="rounded-2xl shadow-2xl w-full"
+            class="about-img"
             loading="lazy"
           />
-          <!-- Badge flotante - CSS personalizado -->
+          <!-- Badge flotante -->
           <div class="about-badge">
-            <span class="text-4xl font-bold text-white">10+</span>
-            <span class="text-sm text-gray-200">Años de Experiencia</span>
+            <span class="about-badge-num">10+</span>
+            <span class="about-badge-txt">AÃ±os de Experiencia</span>
           </div>
+          <!-- Decorative border frame -->
+          <div class="about-img-frame"></div>
         </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="about-stats animate-on-scroll">
+      <div class="about-stat">
+        <span class="about-stat-num">+15</span>
+        <span class="about-stat-lbl">AÃ±os en el mercado</span>
+      </div>
+      <div class="about-stat-sep"></div>
+      <div class="about-stat">
+        <span class="about-stat-num">500+</span>
+        <span class="about-stat-lbl">Clientes satisfechos</span>
+      </div>
+      <div class="about-stat-sep"></div>
+      <div class="about-stat">
+        <span class="about-stat-num">24/7</span>
+        <span class="about-stat-lbl">Servicio de emergencia</span>
+      </div>
+      <div class="about-stat-sep"></div>
+      <div class="about-stat">
+        <span class="about-stat-num">98%</span>
+        <span class="about-stat-lbl">Ãndice de satisfacciÃ³n</span>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Textura de fondo sutil - CSS personalizado */
-  .section-texture {
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     ABOUT SECTION
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  .about-section {
+    position: relative;
+    padding: 100px 0 0;
+    overflow: hidden;
+    background: linear-gradient(160deg, #f7f4ef 0%, #f0ece4 50%, #f4f1ec 100%);
+  }
+
+  .about-watermark {
     position: absolute;
     inset: 0;
-    background-image: 
-      repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 20px,
-        rgba(49, 61, 73, 0.02) 20px,
-        rgba(49, 61, 73, 0.02) 40px
-      );
-    pointer-events: none;
-  }
-  
-  /* Línea de acento decorativa - CSS personalizado */
-  .about-accent-line {
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color-rust), var(--color-primary));
-    border-radius: 2px;
-  }
-  
-  /* Feature cards con hover - CSS personalizado */
-  .feature-card {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    padding: 0.875rem;
-    background: var(--color-white);
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-  }
-  
-  @media (min-width: 768px) {
-    .feature-card {
-      gap: 0.75rem;
-      padding: 1rem;
-      font-size: 1rem;
-    }
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(49, 61, 73, 0.15);
-  }
-  
-  .feature-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-steel));
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
+    opacity: .035;
+    z-index: 0;
+  }
+  .about-watermark img { width: 600px; height: 600px; object-fit: contain; }
+
+  .about-texture {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(49,61,73,.018) 20px,
+      rgba(49,61,73,.018) 40px
+    );
+    pointer-events: none;
+  }
+
+  .about-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  @media(max-width:640px) { .about-container { padding: 0 20px; } }
+
+  /* â”€â”€ GRID â”€â”€ */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  @media(max-width:960px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  /* â”€â”€ TEXT COLUMN â”€â”€ */
+  .about-text-col {
+    order: 1;
+  }
+  @media(max-width:960px) { .about-text-col { order: 2; text-align: center; } }
+
+  .about-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  @media(max-width:960px) { .about-eyebrow { justify-content: center; } }
+  .about-eyebrow-rule {
+    width: 32px; height: 2px;
+    background: linear-gradient(90deg, transparent, #aa7e56);
+    border-radius: 2px;
     flex-shrink: 0;
-    color: var(--color-white);
-    transition: transform 0.3s ease;
   }
-  
-  @media (min-width: 768px) {
-    .feature-icon {
-      width: 40px;
-      height: 40px;
-    }
+  .about-eyebrow-label {
+    font-family: var(--font-heading);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #8b6644;
   }
-  
-  .feature-card:hover .feature-icon {
-    transform: scale(1.1) rotate(5deg);
+
+  .about-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1.0;
+    color: #1e313f;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
   }
-  
-  /* Imagen con badge flotante - CSS personalizado */
+  .about-title em {
+    font-style: italic;
+    background: linear-gradient(135deg, #7b5433, #aa7e56, #cca373);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .about-accent-line {
+    width: 72px;
+    height: 4px;
+    background: linear-gradient(90deg, #7b5433, #aa7e56, #cca373);
+    border-radius: 2px;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .about-accent-line::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 44px; height: 2px;
+    background: rgba(170,126,86,.3);
+    border-radius: 2px;
+  }
+  @media(max-width:960px) {
+    .about-accent-line { margin-left: auto; margin-right: auto; }
+  }
+
+  .about-body {
+    font-family: var(--font-body);
+    font-size: clamp(.95rem, 1.4vw, 1.08rem);
+    line-height: 1.8;
+    color: rgba(34,53,70,.85);
+    margin-bottom: 32px;
+  }
+  .about-body p { margin-bottom: 1rem; }
+  .about-body p:last-child { margin-bottom: 0; }
+  .about-body strong { color: #1e313f; font-weight: 700; }
+  .about-highlight { color: #7b5433; font-weight: 700; font-style: normal; }
+
+  /* â”€â”€ FEATURE CARDS â”€â”€ */
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media(max-width:480px) { .about-features { grid-template-columns: 1fr; } }
+
+  .feature-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(170,126,86,.15);
+    box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    font-family: var(--font-heading);
+    font-size: .88rem;
+    font-weight: 700;
+    color: #1e313f;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    transition: all .3s cubic-bezier(.22,1,.36,1);
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(30,49,63,.12);
+    border-color: rgba(170,126,86,.3);
+  }
+
+  .feature-icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1e313f, #334c60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+    transition: transform .3s ease;
+  }
+  .feature-card:hover .feature-icon { transform: scale(1.1) rotate(5deg); }
+
+  /* â”€â”€ IMAGE COLUMN â”€â”€ */
+  .about-img-col {
+    order: 2;
+  }
+  @media(max-width:960px) { .about-img-col { order: 1; } }
+
   .about-image-wrapper {
     position: relative;
   }
-  
+
+  .about-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    display: block;
+  }
+
+  .about-img-frame {
+    position: absolute;
+    inset: -12px;
+    border: 2px solid rgba(170,126,86,.25);
+    border-radius: 24px;
+    pointer-events: none;
+    z-index: -1;
+  }
+
   .about-badge {
     position: absolute;
-    bottom: -1rem;
-    left: -1rem;
-    background: linear-gradient(135deg, var(--color-rust), #7a5248);
-    padding: 1.5rem;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(100, 66, 57, 0.4);
+    bottom: -18px;
+    left: -18px;
+    background: linear-gradient(135deg, #7b5433, #aa7e56);
+    padding: 20px 24px;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(123,84,51,.45);
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: pulse 3s ease-in-out infinite;
+    z-index: 2;
   }
-  
-  @media (max-width: 768px) {
-    .about-badge {
-      bottom: 1rem;
-      left: 1rem;
-      padding: 1rem;
+  @media(max-width:640px) {
+    .about-badge { bottom: -12px; left: -8px; padding: 14px 18px; }
+  }
+  .about-badge-num {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: .02em;
+  }
+  .about-badge-txt {
+    font-family: var(--font-heading);
+    font-size: .68rem;
+    font-weight: 700;
+    color: rgba(255,255,255,.85);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  /* â”€â”€ STATS BAR â”€â”€ */
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+    padding: 40px 48px;
+    background: linear-gradient(170deg, #13202a 0%, #1a2d3a 100%);
+    border-radius: 20px 20px 0 0;
+    margin-top: 60px;
+  }
+  @media(max-width:768px) {
+    .about-stats {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 20px;
+      border-radius: 16px 16px 0 0;
+      padding: 32px 28px;
     }
+    .about-stat-sep { display: none; }
+  }
+  @media(max-width:480px) {
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  }
+
+  .about-stat { text-align: center; }
+  .about-stat-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: #cca373;
+    letter-spacing: .02em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .about-stat-lbl {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.5);
+  }
+  .about-stat-sep {
+    width: 1px;
+    height: 50px;
+    background: rgba(255,255,255,.1);
   }
 </style>
