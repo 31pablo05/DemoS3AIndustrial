@@ -3,7 +3,7 @@
 ---
 
 <!-- Overlay para el menú mobile -->
-<div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+<div id="mobile-overlay" class="fixed inset-0 z-40 opacity-0 pointer-events-none lg:hidden" style="background:rgba(10,18,25,0.65);backdrop-filter:blur(3px);transition:opacity .35s ease"></div>
 
 <!-- Header industrial con glassmorphism refinado -->
 <header class="fixed w-full top-0 z-50 transition-all duration-500" id="header">
@@ -107,62 +107,74 @@
 </header>
 
 <!-- ══════════════════════════════════════════════
-     PANEL MOBILE (card flotante compacto)
+     PANEL MOBILE — drawer lateral premium
 ══════════════════════════════════════════════ -->
-<aside id="mobile-panel" class="fixed right-4 z-50 w-[280px] flex flex-col lg:hidden rounded-2xl" aria-hidden="true" style="top: 88px;">
+<aside id="mobile-panel" class="fixed top-0 right-0 z-50 w-[300px] max-w-[88vw] flex flex-col lg:hidden" aria-hidden="true">
 
-  <!-- Links de navegación -->
-  <nav class="panel-nav px-2 pt-2 pb-2 space-y-0.5">
+  <!-- ── Cabecera del drawer ── -->
+  <div class="drawer-header">
+    <div class="drawer-brand">
+      <img src="/logo/logo2.svg" alt="S3A Industrial" class="drawer-logo" />
+      <div class="drawer-brand-text">
+        <span class="drawer-brand-name">S3A Industrial</span>
+        <span class="drawer-brand-sub">Sopladores &amp; Servicios</span>
+      </div>
+    </div>
+    <button id="panel-close" class="drawer-close" aria-label="Cerrar menú">
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ── Línea dorada decorativa ── -->
+  <div class="drawer-gold-line"></div>
+
+  <!-- ── Navegación ── -->
+  <nav class="drawer-nav">
 
     <a href="/" class="mobile-nav-item" data-page="/">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
       </span>
-      <span class="flex-1 text-sm font-semibold">Inicio</span>
-      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <span class="mobile-nav-label">Inicio</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
 
     <a href="/nosotros" class="mobile-nav-item" data-page="/nosotros">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
       </span>
-      <span class="flex-1 text-sm font-semibold">Nosotros</span>
-      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <span class="mobile-nav-label">Nosotros</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
 
     <a href="/servicios" class="mobile-nav-item" data-page="/servicios">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
       </span>
-      <span class="flex-1 text-sm font-semibold">Servicios</span>
-      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <span class="mobile-nav-label">Servicios</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
 
     <a href="/cobertura" class="mobile-nav-item" data-page="/cobertura">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
       </span>
-      <span class="flex-1 text-sm font-semibold">Cobertura</span>
-      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <span class="mobile-nav-label">Cobertura</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
 
     <a href="/contacto" class="mobile-nav-item" data-page="/contacto">
       <span class="mobile-nav-icon-wrap">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
       </span>
-      <span class="flex-1 text-sm font-semibold">Contacto</span>
-      <svg class="w-3.5 h-3.5 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <span class="mobile-nav-label">Contacto</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
     </a>
 
-    <!-- CTA dentro del card -->
-    <div class="pt-1.5 pb-0.5">
-      <a href="/contacto" class="panel-cta flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-white text-sm w-full">
-        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-        Solicitar Servicio
-      </a>
-    </div>
-
   </nav>
+
 </aside>
 
 <!-- ══════════════════════════════════════════════ CSS ══════════════════════════════════════════════ -->
@@ -342,51 +354,134 @@
     pointer-events: auto;
   }
 
-  /* ── Mobile Panel ── */
+  /* ══════════════════════════════════
+     DRAWER PANEL
+  ══════════════════════════════════ */
   #mobile-panel {
-    background: #ffffff;
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 4px 16px rgba(0,0,0,0.08);
-    transform: translateY(-12px) scale(0.96);
-    opacity: 0;
+    background: linear-gradient(170deg, #1a2d3a 0%, #1e313f 55%, #162530 100%);
+    box-shadow: -8px 0 48px rgba(0,0,0,0.45), -2px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(100%);
+    transition: transform 0.38s cubic-bezier(0.32,0.72,0,1);
     pointer-events: none;
-    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), opacity 0.25s ease;
+    /* subtle grid texture */
+    background-image:
+      linear-gradient(170deg, #1a2d3a 0%, #1e313f 55%, #162530 100%),
+      repeating-linear-gradient(90deg, transparent 0px, transparent 39px, rgba(255,255,255,.025) 39px, rgba(255,255,255,.025) 40px),
+      repeating-linear-gradient(0deg,  transparent 0px, transparent 39px, rgba(255,255,255,.025) 39px, rgba(255,255,255,.025) 40px);
+    background-blend-mode: normal, overlay, overlay;
   }
   #mobile-panel.is-open {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+    transform: translateX(0);
     pointer-events: auto;
   }
 
-  /* Panel nav container */
-  .panel-nav {
-    /* sin estilos extra, el card es el fondo */
+  /* ── Drawer header ── */
+  .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 16px;
+    flex-shrink: 0;
+  }
+  .drawer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .drawer-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,.4));
+  }
+  .drawer-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .drawer-brand-name {
+    font-family: var(--font-display, serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .drawer-brand-sub {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #aa7e56;
+    line-height: 1;
+  }
+  .drawer-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.10);
+    color: rgba(255,255,255,0.55);
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+    flex-shrink: 0;
+  }
+  .drawer-close:hover {
+    background: rgba(255,255,255,0.13);
+    color: #fff;
+    transform: rotate(90deg);
   }
 
-  /* Mobile Nav Items */
+  /* ── Gold line ── */
+  .drawer-gold-line {
+    height: 2px;
+    margin: 0 20px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent, #aa7e56 30%, #cca373 60%, transparent);
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+
+  /* ── Nav ── */
+  .drawer-nav {
+    padding: 10px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .drawer-nav::-webkit-scrollbar { width: 0; }
+
   .mobile-nav-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 10px;
-    border-radius: 10px;
-    color: #374151;
+    gap: 13px;
+    padding: 13px 12px;
+    border-radius: 12px;
+    color: rgba(255,255,255,0.62);
     text-decoration: none;
-    transition: all 0.2s ease;
     position: relative;
+    transition: background .2s ease, color .2s ease, padding-left .2s ease;
+    border-left: 3px solid transparent;
   }
   .mobile-nav-item:hover {
-    background: #f3f4f6;
-    color: #111827;
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.92);
+    border-left-color: rgba(170,126,86,0.5);
+    padding-left: 15px;
   }
-  .mobile-nav-item:hover svg:last-child { opacity: 60; transform: translateX(2px); }
   .mobile-nav-item.active {
-    background: rgba(155,74,42,0.08);
-    color: var(--color-rust);
+    background: rgba(170,126,86,0.12);
+    color: #cca373;
+    border-left-color: #aa7e56;
     font-weight: 700;
   }
   .mobile-nav-item.active .mobile-nav-icon-wrap {
-    background: rgba(155,74,42,0.15);
+    background: rgba(170,126,86,0.18);
+    color: #cca373;
   }
   .mobile-nav-item:active { transform: scale(0.98); }
 
@@ -394,26 +489,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    background: #f3f4f6;
-    color: #223546;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.55);
     flex-shrink: 0;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition: background .2s ease, color .2s ease;
   }
   .mobile-nav-item:hover .mobile-nav-icon-wrap {
-    background: #e5e7eb;
-    color: #223546;
+    background: rgba(255,255,255,0.11);
+    color: rgba(255,255,255,0.85);
   }
 
-  .panel-cta {
-    background: linear-gradient(135deg, #223546 0%, #2e4a61 100%);
-    box-shadow: 0 3px 12px rgba(34,53,70,0.3);
-    transition: all 0.25s ease;
+  .mobile-nav-label {
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
-  .panel-cta:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(34,53,70,0.4); }
-  .panel-cta:active { transform: scale(0.98); }
+
+  .mobile-nav-chevron {
+    width: 14px;
+    height: 14px;
+    opacity: 0.25;
+    flex-shrink: 0;
+    transition: opacity .2s ease, transform .2s ease;
+  }
+  .mobile-nav-item:hover .mobile-nav-chevron {
+    opacity: 0.55;
+    transform: translateX(2px);
+  }
+  .mobile-nav-item.active .mobile-nav-chevron { opacity: 0.5; }
+
+
 
   /* ── Pulse animations ── */
   .phone-pulse {
@@ -421,23 +530,27 @@
   }
   @keyframes phonePulse {
     0%,100% { opacity: 1; transform: scale(1); }
-    50%      { opacity: 0.5; transform: scale(1.4); }
+    70%      { opacity: 0.4; transform: scale(1.5); }
   }
 
   /* ── Scroll padding ── */
   html { scroll-padding-top: 96px; }
 
-  /* ── Stagger de entrada ── */
-  #mobile-panel .mobile-nav-item { opacity: 1; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(1) { animation: fadeUp 0.25s ease 0.06s both; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(2) { animation: fadeUp 0.25s ease 0.10s both; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(3) { animation: fadeUp 0.25s ease 0.14s both; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(4) { animation: fadeUp 0.25s ease 0.18s both; }
-  #mobile-panel.is-open .mobile-nav-item:nth-child(5) { animation: fadeUp 0.25s ease 0.22s both; }
+  /* ── Stagger nav items on open ── */
+  #mobile-panel .mobile-nav-item {
+    opacity: 0;
+    transform: translateX(18px);
+    transition: opacity .25s ease, transform .25s ease, background .2s ease, color .2s ease, padding-left .2s ease, border-left-color .2s ease;
+  }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(1) { animation: slideIn .28s ease 0.08s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(2) { animation: slideIn .28s ease 0.13s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(3) { animation: slideIn .28s ease 0.18s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(4) { animation: slideIn .28s ease 0.23s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(5) { animation: slideIn .28s ease 0.28s both; }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(6px); }
-    to   { opacity: 1; transform: translateY(0); }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(16px); }
+    to   { opacity: 1; transform: translateX(0); }
   }
 
   /* ── Reducir movimiento ── */
@@ -485,6 +598,9 @@
   });
 
   overlay.addEventListener('click', closePanel);
+
+  // Botón de cierre interno del drawer
+  document.getElementById('panel-close')?.addEventListener('click', closePanel);
 
   // Cerrar con Escape
   document.addEventListener('keydown', (e) => {

@@ -71,25 +71,26 @@
 /* ─── Logo watermark badge ─── */
 .cta-logo-badge {
   position: absolute;
-  top: 80px;
-  right: 60px;
-  width: 140px;
-  height: 140px;
-  opacity: 0.08;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(700px, 90vw);
+  height: auto;
+  opacity: 0.07;
   pointer-events: none;
   z-index: 1;
-  animation: float-logo 8s ease-in-out infinite;
+  animation: float-logo 10s ease-in-out infinite;
+  filter: drop-shadow(0 0 60px rgba(170,126,86,.25));
+  mix-blend-mode: luminosity;
 }
 @keyframes float-logo {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(5deg); }
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%       { transform: translate(-50%, -52%) scale(1.03); }
 }
 @media(max-width: 768px) {
   .cta-logo-badge {
-    top: 40px;
-    right: 20px;
-    width: 100px;
-    height: 100px;
+    width: min(480px, 95vw);
+    opacity: 0.06;
   }
 }
 
