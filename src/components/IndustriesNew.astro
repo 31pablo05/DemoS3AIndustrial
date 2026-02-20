@@ -153,6 +153,7 @@
   .underline-anim {
     position: relative;
     display: inline-block;
+    padding-right: 0.12em;
   }
   .underline-anim::after {
     content: '';
@@ -197,7 +198,27 @@
     .industries-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   }
   @media (max-width: 600px) {
-    .industries-grid { grid-template-columns: 1fr; gap: 16px; }
+    .industries-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .industry-card {
+      padding: 16px 10px 14px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .card-icon-wrap {
+      width: 40px; height: 40px;
+      border-radius: 11px;
+      margin-bottom: 8px;
+      flex-shrink: 0;
+    }
+    .card-icon-wrap svg { width: 18px; height: 18px; }
+    .card-title { font-size: .72rem; margin-bottom: 3px; letter-spacing: 0; line-height: 1.2; }
+    .card-subtitle { font-size: .6rem; letter-spacing: 0; line-height: 1.3; margin-bottom: 0; }
   }
 
   /* ─── SINGLE CARD ─────────────────────────────────────── */
@@ -205,7 +226,7 @@
     position: relative;
     background: var(--white);
     border-radius: var(--radius-card);
-    padding: 40px 32px 36px;
+    padding: 28px 24px 24px;
     border: 1px solid rgba(170,126,86,.14);
     box-shadow: var(--shadow-sm);
     transition:
@@ -247,25 +268,16 @@
   .industry-card:hover .card-glow { opacity: 1; }
 
   /* Number badge */
-  .card-num {
-    position: absolute;
-    top: 20px; right: 22px;
-    font-family: var(--font-heading);
-    font-size: .78rem;
-    font-weight: 700;
-    letter-spacing: .06em;
-    color: var(--gold);
-    opacity: .55;
-  }
+  .card-num { display: none; }
 
   /* Icon wrapper */
   .card-icon-wrap {
-    width: 64px; height: 64px;
-    border-radius: 18px;
+    width: 52px; height: 52px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 28px;
+    margin-bottom: 16px;
     transition: transform .5s var(--ease-out);
     position: relative;
     z-index: 1;
@@ -644,8 +656,7 @@
     .stat-num { font-size: 1.8rem; }
   }
   @media (max-width: 480px) {
-    .container { padding: 0 16px; }
-    .industry-card { padding: 32px 24px 28px; }
+    .container { padding: 0 12px; }
     .cta-headline { font-size: 1.6rem; }
   }
 </style>
@@ -675,7 +686,7 @@
       </h2>
 
       <p class="section-subtext" style="margin-top: 28px;">
-        Más de <strong>15 años</strong> brindando soluciones especializadas en
+        Amplia <strong>experiencia</strong> brindando soluciones especializadas en
         <strong>mantenimiento de sopladores industriales</strong>
         para los sectores productivos más exigentes del mercado.
       </p>
@@ -696,17 +707,6 @@
         <div class="card-num">01</div>
         <h3 class="card-title">Alimentaria</h3>
         <p class="card-subtitle">Panadería · Lácteos · Alimentos</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Sistemas de ventilación</li>
-          <li>Control de calidad del aire</li>
-        </ul>
-        <div class="card-cta">
-          Conocer más
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </div>
       </article>
 
       <!-- 02 Química -->
@@ -720,17 +720,6 @@
         <span class="card-num">02</span>
         <h3 class="card-title">Química</h3>
         <p class="card-subtitle">Petroquímica · Farmacéutica</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Ambientes controlados</li>
-          <li>Extracción de gases</li>
-        </ul>
-        <div class="card-cta">
-          Conocer más
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </div>
       </article>
 
       <!-- 03 Textil -->
@@ -744,17 +733,6 @@
         <span class="card-num">03</span>
         <h3 class="card-title">Textil</h3>
         <p class="card-subtitle">Hilaterías · Teñido · Acabados</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Secado y curado</li>
-          <li>Control de humedad</li>
-        </ul>
-        <div class="card-cta">
-          Conocer más
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </div>
       </article>
 
       <!-- 04 Minería -->
@@ -768,17 +746,6 @@
         <span class="card-num">04</span>
         <h3 class="card-title">Minería</h3>
         <p class="card-subtitle">Extractiva · Minerales</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Extracción de polvo</li>
-          <li>Ventilación de túneles</li>
-        </ul>
-        <div class="card-cta">
-          Conocer más
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </div>
       </article>
 
       <!-- 05 Metalúrgica -->
@@ -793,17 +760,6 @@
         <span class="card-num">05</span>
         <h3 class="card-title">Metalúrgica</h3>
         <p class="card-subtitle">Fundición · Siderurgia · Forjas</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Alta temperatura</li>
-          <li>Extracción de humos</li>
-        </ul>
-        <div class="card-cta">
-          Conocer más
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </div>
       </article>
 
       <!-- 06 Papel -->
@@ -817,66 +773,9 @@
         <span class="card-num">06</span>
         <h3 class="card-title">Papel</h3>
         <p class="card-subtitle">Celulosa · Cartón Corrugado</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Proceso de secado</li>
-          <li>Control de vapor</li>
-        </ul>
-        <div class="card-cta">
-          Conocer más
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </div>
       </article>
 
-      <!-- 07 Cemento -->
-      <article class="industry-card card-rust reveal reveal-delay-7" role="listitem" tabindex="0">
-        <div class="card-glow"></div>
-        <div class="card-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-          </svg>
-        </div>
-        <span class="card-num">07</span>
-        <h3 class="card-title">Cemento</h3>
-        <p class="card-subtitle">Cementeras · Hormigón</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Hornos de clinker</li>
-          <li>Transporte neumático</li>
-        </ul>
-        <div class="card-cta">
-          Conocer más
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </div>
-      </article>
 
-      <!-- 08 Energía -->
-      <article class="industry-card card-dual reveal reveal-delay-8" role="listitem" tabindex="0">
-        <div class="card-glow"></div>
-        <div class="card-icon-wrap">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-          </svg>
-        </div>
-        <span class="card-num">08</span>
-        <h3 class="card-title">Energía</h3>
-        <p class="card-subtitle">Centrales Térmicas · Cogeneración</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Calderas industriales</li>
-          <li>Turbinas de gas</li>
-        </ul>
-        <div class="card-cta">
-          Conocer más
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-          </svg>
-        </div>
-      </article>
 
     </div><!-- /industries-grid -->
 
@@ -897,28 +796,21 @@
           </h3>
 
           <p class="cta-body">
-            Tenemos <strong>más de 15 años de experiencia</strong> en múltiples sectores industriales.
+            Contamos con <strong>amplia experiencia</strong> en múltiples sectores industriales.
             Contáctenos y descubra cómo podemos ayudar a su empresa con soluciones a medida.
           </p>
 
           <!-- Stats -->
           <div class="cta-stats" role="list">
             <div class="stat-item" role="listitem">
-              <span class="stat-num">+15</span>
-              <span class="stat-label">Años</span>
-            </div>
-            <div class="stat-item" role="listitem">
-              <span class="stat-num">+500</span>
+              <span class="stat-num">+100</span>
               <span class="stat-label">Clientes</span>
             </div>
             <div class="stat-item" role="listitem">
               <span class="stat-num">+20</span>
               <span class="stat-label">Industrias</span>
             </div>
-            <div class="stat-item" role="listitem">
-              <span class="stat-num">24/7</span>
-              <span class="stat-label">Soporte</span>
-            </div>
+
           </div>
 
           <!-- Trust pills -->
