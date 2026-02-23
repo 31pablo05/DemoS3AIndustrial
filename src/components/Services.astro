@@ -35,6 +35,35 @@
       </p>
     </div>
 
+    <!-- IMAGE BAND -->
+    <div class="svc-imgband animate-on-scroll">
+      <!-- Left: texto / stats -->
+      <div class="svc-imgband-text">
+        <div class="svc-imgband-tag">
+          <span class="svc-imgband-dot"></span>
+          Trabajo en sitio
+        </div>
+        <h3 class="svc-imgband-heading">Nos desplazamos a su planta</h3>
+        <p class="svc-imgband-body">Nuestros técnicos se trasladan directamente a sus instalaciones para minimizar los tiempos de parada y garantizar la continuidad operativa.</p>
+        <div class="svc-imgband-stats">
+          <div class="svc-imgband-stat">
+            <span class="svc-imgband-stat-num">100<span class="svc-imgband-stat-unit">%</span></span>
+            <span class="svc-imgband-stat-label">Servicio en sitio</span>
+          </div>
+          <div class="svc-imgband-divider"></div>
+          <div class="svc-imgband-stat">
+            <span class="svc-imgband-stat-num">+10<span class="svc-imgband-stat-unit">años</span></span>
+            <span class="svc-imgband-stat-label">de experiencia</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right: imagen portrait -->
+      <div class="svc-imgband-imgwrap">
+        <img src="/imagenes/S3AImagnes/repicky28.png" alt="Técnico en planta industrial" class="svc-imgband-img" />
+        <div class="svc-imgband-overlay"></div>
+      </div>
+    </div>
+
     <!-- CARDS GRID -->
     <div class="svc-grid">
 
@@ -468,5 +497,138 @@
 }
 @media(min-width:601px) and (max-width:960px) {
   .svc-card--featured { grid-column: 1 / -1; }
+}
+
+/* ── IMAGE BAND ── */
+.svc-imgband {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 64px;
+  border: 1px solid rgba(170,126,86,.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,.4);
+  background: rgba(255,255,255,.04);
+  min-height: 420px;
+}
+@media(max-width:860px) {
+  .svc-imgband { grid-template-columns: 1fr; min-height: auto; }
+}
+@media(max-width:640px) { .svc-imgband { margin-bottom: 40px; } }
+
+/* Left text panel */
+.svc-imgband-text {
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+@media(max-width:640px) { .svc-imgband-text { padding: 32px 24px; } }
+
+.svc-imgband-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #cca373;
+  background: rgba(170,126,86,.1);
+  border: 1px solid rgba(170,126,86,.25);
+  padding: 6px 16px;
+  border-radius: 100px;
+  width: fit-content;
+}
+.svc-imgband-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #cca373;
+  animation: pulse-dot 2.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .4; transform: scale(.7); }
+}
+.svc-imgband-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  line-height: 1.1;
+  margin: 0;
+}
+.svc-imgband-body {
+  font-family: var(--font-body);
+  font-size: .95rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,.6);
+  max-width: 440px;
+  margin: 0;
+}
+.svc-imgband-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.svc-imgband-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.svc-imgband-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #cca373;
+  line-height: 1;
+  letter-spacing: .02em;
+}
+.svc-imgband-stat-unit {
+  font-size: 1rem;
+  margin-left: 2px;
+}
+.svc-imgband-stat-label {
+  font-family: var(--font-heading);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+}
+.svc-imgband-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(170,126,86,.25);
+}
+
+/* Right image panel */
+.svc-imgband-imgwrap {
+  position: relative;
+  overflow: hidden;
+}
+@media(max-width:860px) {
+  .svc-imgband-imgwrap { height: 360px; }
+}
+.svc-imgband-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 6s ease;
+}
+.svc-imgband:hover .svc-imgband-img { transform: scale(1.04); }
+.svc-imgband-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(20,31,39,.6) 0%, transparent 50%);
 }
 </style>
