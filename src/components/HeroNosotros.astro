@@ -2,10 +2,13 @@
 // Hero Nosotros - Sección hero para página Nosotros
 ---
 
-<section class="relative min-h-[65vh] lg:min-h-[60vh] flex items-center overflow-hidden bg-black pt-32 md:pt-36 lg:pt-44">
+<section class="relative min-h-[80vh] lg:min-h-[85vh] flex items-center overflow-hidden bg-black pt-32 md:pt-36 lg:pt-44">
   <!-- Background Image -->
   <div class="absolute inset-0">
-    <img src="/imagenes/imagen4.webp" alt="S3A Industrial" class="w-full h-full object-cover opacity-60" />
+    <!-- Desktop image -->
+    <img src="/imagenes/S3AImagnes/repickydesktop1.png" alt="S3A Industrial" class="hero-img hero-img--desktop w-full h-full object-cover opacity-60" style="object-position: center 0%;" />
+    <!-- Mobile image: portrait ~800×1200px, poné el archivo en /imagenes/S3AImagnes/ -->
+    <img src="/imagenes/S3AImagnes/repicky24.png" alt="S3A Industrial" class="hero-img hero-img--mobile w-full h-full object-cover opacity-60" style="object-position: 1% 99%;" />
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
   </div>
   
@@ -15,7 +18,7 @@
   </div>
   
   <!-- Content -->
-  <div class="w-full max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+  <div class="w-full max-w-6xl mx-auto relative z-10" style="padding-left: clamp(2rem, 8vw, 7rem); padding-right: clamp(1.5rem, 5vw, 4rem);">
     <div class="text-white">
       <!-- Breadcrumb -->
       <nav style="font-family: var(--font-body);" class="text-xs md:text-sm mb-5 opacity-80 tracking-widest uppercase flex items-center gap-2">
@@ -55,3 +58,15 @@
   <!-- Golden bottom separator -->
   <div class="absolute bottom-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #aa7e56 30%, #cca373 60%, #aa7e56 80%, transparent 100%);"></div>
 </section>
+
+<style>
+  /* Mobile: mostrar imagen mobile, ocultar desktop */
+  .hero-img--desktop { display: none; }
+  .hero-img--mobile  { display: block; }
+
+  /* Desktop: mostrar imagen desktop, ocultar mobile */
+  @media (min-width: 1024px) {
+    .hero-img--desktop { display: block; }
+    .hero-img--mobile  { display: none; }
+  }
+</style>

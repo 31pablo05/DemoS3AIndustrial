@@ -7,7 +7,8 @@ const WHATSAPP_NUMBER = "5491XXXXXXXXX";
 <section id="inicio" class="hero-section">
   <!-- Background -->
   <div class="hero-background">
-    <img src="/imagenes/imagen1.jpg" alt="" class="hero-image" />
+    <img src="/imagenes/S3AImagnes/repickydesktop2.png" alt="" class="hero-image hero-image--desktop" />
+    <img src="public/imagenes/S3AImagnes/repicky25.png" alt="" class="hero-image hero-image--mobile" />
     <div class="hero-overlay"></div>
   </div>
 
@@ -51,13 +52,13 @@ const WHATSAPP_NUMBER = "5491XXXXXXXXX";
               <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span>Técnicos certificados y especializados</span>
+              <span>Técnicos especializados</span>
             </li>
             <li class="feature">
               <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span>Presupuesto sin cargo en 24 hs</span>
+              <span>Presupuesto detallado y transparente</span>
             </li>
           </ul>
 
@@ -218,26 +219,42 @@ Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disp
   ───────────────────────────────────────── */
   .hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     overflow: hidden;
     background: linear-gradient(135deg, #0d1821 0%, #1e313f 100%);
     padding-top: 140px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
   @media (min-width: 1024px) {
-    .hero-section { padding-top: 160px; }
+    .hero-section { min-height: 100vh; padding-top: 160px; padding-bottom: 60px; }
   }
 
   /* ── BACKGROUND ── */
   .hero-background { position: absolute; inset: 0; z-index: 0; }
-  .hero-image { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
+  .hero-image { width: 100%; height: 100%; object-fit: cover; opacity: 1; }
+
+  /* Mobile: show repicky25, hide desktop */
+  .hero-image--desktop { display: none; }
+  .hero-image--mobile  { display: block; object-fit: cover; object-position: center center; width: 100%; height: 100%; opacity: 0.6; }
+
+  /* Desktop: show repicky9, hide repicky10 */
+  @media (min-width: 1024px) {
+    .hero-image--desktop { display: block; }
+    .hero-image--mobile  { display: none; }
+  }
   .hero-overlay {
     position: absolute; inset: 0;
     background:
-      linear-gradient(to right, rgba(13,24,33,.92) 0%, rgba(13,24,33,.70) 55%, rgba(30,49,63,.50) 100%),
-      linear-gradient(to bottom, rgba(0,0,0,.3) 0%, transparent 40%, rgba(0,0,0,.4) 100%);
+      linear-gradient(to right, rgba(13,24,33,.72) 0%, rgba(13,24,33,.38) 45%, rgba(13,24,33,.08) 100%),
+      linear-gradient(to bottom, rgba(0,0,0,.08) 0%, transparent 30%, rgba(0,0,0,.12) 100%);
+  }
+  /* Mobile overlay: igual que HeroNosotros — oscuro arriba y abajo */
+  @media (max-width: 1023px) {
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,.70) 0%, rgba(0,0,0,.50) 50%, rgba(0,0,0,.70) 100%);
+    }
   }
 
   /* ── TOP BAR ── */
@@ -285,7 +302,6 @@ Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disp
     background: rgba(170,126,86,.12);
     border: 1px solid rgba(170,126,86,.3);
     border-radius: 100px;
-    backdrop-filter: blur(8px);
     width: fit-content;
   }
   .hero-eyebrow-dot {
@@ -366,7 +382,7 @@ Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disp
     font-family: var(--font-accent); font-size: .95rem; font-weight: 700;
     text-transform: uppercase; text-decoration: none; border-radius: .375rem;
     border: 2px solid rgba(255,255,255,.2);
-    transition: all .3s ease; letter-spacing: .05em; backdrop-filter: blur(10px);
+    transition: all .3s ease; letter-spacing: .05em;
     white-space: nowrap;
   }
   .btn-secondary:hover { background: rgba(255,255,255,.15); border-color: var(--golden); }
@@ -375,9 +391,10 @@ Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disp
      COLUMNA DERECHA: FORMULARIO WHATSAPP
   ───────────────────────────────────────── */
   .form-card {
-    background: rgba(255,255,255,.06);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(13,24,33,.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,.15);
     border-radius: 1.25rem;
     padding: 1.75rem;
     box-shadow: 0 20px 60px rgba(0,0,0,.4);

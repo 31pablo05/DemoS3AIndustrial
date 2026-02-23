@@ -85,7 +85,7 @@
       <div class="about-img-col animate-on-scroll">
         <div class="about-image-wrapper">
           <img
-            src="/imagenes/imagen2.png"
+            src="/imagenes/S3AImagnes/repicky27.png"
             alt="Equipo S3A Industrial trabajando"
             class="about-img"
             loading="lazy"
@@ -101,18 +101,7 @@
       </div>
     </div>
 
-    <!-- Stats bar -->
-    <div class="about-stats animate-on-scroll">
-      <div class="about-stat">
-        <span class="about-stat-num">100+</span>
-        <span class="about-stat-lbl">Clientes satisfechos</span>
-      </div>
-      <div class="about-stat-sep"></div>
-      <div class="about-stat">
-        <span class="about-stat-num">98%</span>
-        <span class="about-stat-lbl">Índice de satisfacción</span>
-      </div>
-    </div>
+
   </div>
 </section>
 
@@ -122,8 +111,8 @@
   ============================================ */
   .about-section {
     position: relative;
-    padding: 100px 0 0;
-    overflow: hidden;
+    padding: 100px 0 80px;
+    overflow: visible;
     background: linear-gradient(160deg, #f7f4ef 0%, #f0ece4 50%, #f4f1ec 100%);
   }
 
@@ -158,6 +147,7 @@
     padding: 0 32px;
     position: relative;
     z-index: 2;
+    overflow: visible;
   }
   @media (max-width: 640px) { .about-container { padding: 0 20px; } }
 
@@ -167,14 +157,15 @@
     grid-template-columns: 1fr 1fr;
     gap: 72px;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 0;
+    overflow: visible;
   }
   @media (max-width: 960px) {
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
   }
 
   /* -- TEXT COLUMN -- */
-  .about-text-col { order: 1; }
+  .about-text-col { order: 1; overflow: visible; padding-right: 0.15em; }
   @media (max-width: 960px) { .about-text-col { order: 2; text-align: center; } }
 
   .about-eyebrow {
@@ -205,14 +196,18 @@
     font-family: var(--font-display);
     font-size: clamp(3.2rem, 6vw, 5.2rem);
     font-weight: 400;
-    line-height: 1.0;
+    line-height: 1.05;
     color: #1e313f;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     margin-bottom: 20px;
+    overflow: visible;
+    padding-right: 0.1em;
   }
   .about-title em {
     font-style: italic;
+    display: inline-block;
+    padding-right: 0.12em;
     background: linear-gradient(135deg, #334c60, #223546);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -355,60 +350,7 @@
     text-align: center;
   }
 
-  /* -- STATS BAR -- */
-  .about-stats {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-    align-items: center;
-    gap: 0;
-    padding: 44px 56px;
-    background: linear-gradient(160deg, #13202a 0%, #1a2d3a 60%, #1e313f 100%);
-    border-radius: 20px 20px 0 0;
-    margin-top: 60px;
-    border-top: 3px solid #334c60;
-  }
-  @media (max-width: 768px) {
-    .about-stats {
-      grid-template-columns: 1fr 1fr;
-      gap: 36px 20px;
-      border-radius: 16px 16px 0 0;
-      padding: 36px 28px;
-    }
-    .about-stat-sep { display: none; }
-  }
-  @media (max-width: 480px) {
-    .about-stats { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
-  }
 
-  .about-stat { text-align: center; }
-
-  .about-stat-num {
-    display: block;
-    font-family: var(--font-display);
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
-    font-weight: 400;
-    background: linear-gradient(135deg, #ffffff 0%, #b0c8d8 60%, #334c60 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: 0.02em;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .about-stat-lbl {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.45);
-  }
-  .about-stat-sep {
-    width: 1px;
-    height: 54px;
-    background: linear-gradient(180deg, transparent, rgba(255,255,255,0.12), transparent);
-  }
 
   /* -- SCROLL ANIMATION -- */
   .animate-on-scroll {
