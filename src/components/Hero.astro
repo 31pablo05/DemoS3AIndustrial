@@ -81,8 +81,9 @@ const WHATSAPP_NUMBER = "5491XXXXXXXXX";
         <div class="form-card">
           <!-- Header -->
           <div class="form-card-header">
-            <div class="form-badge">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <div class="form-header-text">
+              <div class="form-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.525 5.845L.057 23.986l6.306-1.452A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.374l-.36-.213-3.737.859.882-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/>
               </svg>
@@ -90,6 +91,8 @@ const WHATSAPP_NUMBER = "5491XXXXXXXXX";
             </div>
             <h2 class="form-title">Solicitar Presupuesto</h2>
             <p class="form-subtitle">Completá los datos y te contactamos al instante</p>
+            </div><!-- /form-header-text -->
+            <img src="/logo/logo2.svg" alt="S3A Industrial" class="form-logo" />
           </div>
 
           <!-- Form -->
@@ -407,7 +410,27 @@ Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disp
   }
 
   /* Card header */
-  .form-card-header { display: flex; flex-direction: column; gap: .5rem; }
+  .form-card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+  }
+  .form-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .form-logo {
+    width: clamp(70px, 10vw, 110px);
+    height: auto;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,.4));
+  }
 
   .form-badge {
     display: inline-flex; align-items: center; gap: 7px;

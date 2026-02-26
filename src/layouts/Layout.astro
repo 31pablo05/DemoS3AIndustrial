@@ -5,12 +5,56 @@ import '../styles/animations.css';
 interface Props {
   title?: string;
   description?: string;
+  canonicalURL?: string;
+  ogImage?: string;
+  noindex?: boolean;
 }
 
-const { 
-  title = 'S3A Industrial - Expertos en Sopladores Industriales', 
-  description = 'Servicio especializado en reparación y mantenimiento de sopladores industriales. Atención profesional en sitio.' 
+const {
+  title = 'S3A Industrial | Reparación y Mantenimiento de Sopladores Industriales',
+  description = 'S3A Industrial — especialistas en reparación, mantenimiento preventivo y correctivo de sopladores industriales. Servicio técnico profesional en planta, respuesta rápida y diagnóstico eficiente.',
+  canonicalURL = Astro.url.href,
+  ogImage = '/logo/logo2.svg',
+  noindex = false,
 } = Astro.props;
+
+const siteName = 'S3A Industrial';
+const siteURL = 'https://s3aindustrial.com';
+
+// JSON-LD: LocalBusiness structured data
+const jsonLD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "S3A Industrial",
+  "description": "Empresa especializada en reparación y mantenimiento de sopladores industriales. Servicio técnico en sitio con mantenimiento preventivo y correctivo.",
+  "url": siteURL,
+  "logo": `${siteURL}/logo/logo2.svg`,
+  "image": `${siteURL}/logo/logo1.png`,
+  "telephone": "+54 9 11 XXXX-XXXX",
+  "email": "contacto@s3aindustrial.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AR",
+    "addressRegion": "Buenos Aires"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Argentina"
+  },
+  "serviceType": [
+    "Reparación de Sopladores Industriales",
+    "Mantenimiento Preventivo Industrial",
+    "Mantenimiento Correctivo Industrial",
+    "Diagnóstico Técnico en Sitio"
+  ],
+  "sameAs": [],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }
+});
 ---
 
 <!DOCTYPE html>
@@ -18,28 +62,46 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    
-    <!-- SEO -->
-    <meta name="keywords" content="sopladores industriales, reparación industrial, mantenimiento preventivo, mantenimiento correctivo, servicios industriales" />
+
+    <!-- ── Título y descripción ── -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- ── SEO básico ── -->
     <meta name="author" content="S3A Industrial" />
-    
-    <!-- Open Graph -->
+    <meta name="keywords" content="sopladores industriales, reparación sopladores, mantenimiento sopladores industriales, servicio técnico industrial, mantenimiento preventivo industrial, mantenimiento correctivo, sopladores de raíz, reparación en sitio, Argentina" />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- ── Open Graph (Facebook / LinkedIn / WhatsApp) ── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    
-    <!-- Google Fonts - Industrial Typography -->
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={`${siteURL}${ogImage}`} />
+    <meta property="og:image:alt" content="Logo de S3A Industrial" />
+    <meta property="og:locale" content="es_AR" />
+
+    <!-- ── Twitter / X Card ── -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteURL}${ogImage}`} />
+
+    <!-- ── Favicon (logo de la empresa en la pestaña) ── -->
+    <link rel="icon" type="image/svg+xml" href="/logo/logo2.svg" />
+    <link rel="apple-touch-icon" href="/logo/logo1.png" />
+    <meta name="theme-color" content="#1a1a2e" />
+
+    <!-- ── JSON-LD: datos estructurados LocalBusiness ── -->
+    <script type="application/ld+json" set:html={jsonLD} />
+
+    <!-- ── Google Fonts ── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
-    
-    <title>{title}</title>
   </head>
   <body class="antialiased">
     <slot />
