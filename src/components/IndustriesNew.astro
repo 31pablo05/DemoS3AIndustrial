@@ -462,7 +462,7 @@
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 56px;
   }
@@ -470,16 +470,26 @@
     .cta-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
   }
 
-  /* Stats grid inside CTA */
+  /* Stats row inside CTA */
   .cta-stats {
     display: flex;
-    gap: 36px;
-    margin: 32px 0 40px;
+    gap: 0;
+    margin: 36px 0 0;
     flex-wrap: wrap;
   }
   @media (max-width: 900px) { .cta-stats { justify-content: center; } }
 
-  .stat-item { display: flex; flex-direction: column; }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 28px 0 0;
+  }
+  .stat-item:first-child { padding-left: 0; }
+  .stat-divider {
+    padding: 0 28px;
+    border-left: 1px solid rgba(255,255,255,.12);
+    border-right: 1px solid rgba(255,255,255,.12);
+  }
   .stat-num {
     font-family: var(--font-display);
     font-size: 2.5rem;
@@ -514,6 +524,9 @@
     width: 28px; height: 1px;
     background: var(--gold-light);
   }
+  @media (max-width: 900px) {
+    .cta-eyebrow { justify-content: center; }
+  }
 
   .cta-headline {
     font-family: var(--font-display);
@@ -533,44 +546,64 @@
     font-size: 1rem;
     line-height: 1.7;
     color: rgba(255,255,255,.62);
-    max-width: 540px;
-    margin-top: 16px;
+    margin-top: 20px;
   }
   .cta-body strong { color: rgba(255,255,255,.88); font-weight: 600; }
 
-  /* Trust pills row */
-  .cta-trust {
+  /* ── Right card ── */
+  .cta-card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 20px;
+    padding: 32px 36px;
+    backdrop-filter: blur(8px);
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 36px;
+    flex-direction: column;
+    gap: 24px;
   }
-  @media (max-width: 900px) { .cta-trust { justify-content: center; } }
+  @media (max-width: 600px) { .cta-card { padding: 24px 20px; } }
 
-  .trust-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 7px 14px;
-    border-radius: 100px;
-    background: rgba(255,255,255,.07);
-    border: 1px solid rgba(255,255,255,.10);
-    font-size: .78rem;
-    font-weight: 600;
-    color: rgba(255,255,255,.70);
-    transition: background .3s;
+  .cta-card-title {
+    font-family: var(--font-heading);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
   }
-  .trust-pill:hover { background: rgba(255,255,255,.12); }
-  .trust-pill svg { width: 13px; height: 13px; color: var(--gold-light); }
+
+  .cta-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .cta-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: .95rem;
+    font-weight: 500;
+    color: rgba(255,255,255,.82);
+    line-height: 1.4;
+    text-align: left;
+  }
+  .cta-checklist li svg {
+    width: 18px; height: 18px;
+    stroke: var(--gold-light);
+    flex-shrink: 0;
+    background: rgba(170,126,86,.15);
+    border-radius: 50%;
+    padding: 2px;
+  }
 
   /* Buttons column */
   .cta-actions {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    align-items: flex-end;
-    flex-shrink: 0;
-    min-width: 220px;
+    gap: 12px;
   }
   @media (max-width: 900px) {
     .cta-actions { align-items: center; flex-direction: row; justify-content: center; flex-wrap: wrap; }
@@ -786,9 +819,10 @@
 
       <div class="cta-inner">
 
-        <!-- Left: text -->
-        <div>
-          <p class="cta-eyebrow">¿Su sector no aparece?</p>
+        <!-- Left / Top: text + stats -->
+        <div class="cta-left">
+
+          <p class="cta-eyebrow">Soluciones a medida para su empresa</p>
 
           <h3 class="cta-headline">
             Trabajamos con<br>
@@ -796,58 +830,65 @@
           </h3>
 
           <p class="cta-body">
-            Contamos con <strong>amplia experiencia</strong> en múltiples sectores industriales.
-            Contáctenos y descubra cómo podemos ayudar a su empresa con soluciones a medida.
+            Desde el diagnóstico hasta la puesta en marcha, S3A Industrial
+            acompaña cada etapa del mantenimiento de sus sopladores.
+            <strong>Presupuesto detallado, respuesta ágil y trabajo garantizado.</strong>
           </p>
 
-          <!-- Stats -->
+          <!-- Stats row -->
           <div class="cta-stats" role="list">
             <div class="stat-item" role="listitem">
               <span class="stat-num">+100</span>
-              <span class="stat-label">Clientes</span>
+              <span class="stat-label">Clientes activos</span>
+            </div>
+            <div class="stat-item stat-divider" role="listitem">
+              <span class="stat-num">+20</span>
+              <span class="stat-label">Sectores atendidos</span>
             </div>
             <div class="stat-item" role="listitem">
-              <span class="stat-num">+20</span>
-              <span class="stat-label">Industrias</span>
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Servicio en sitio</span>
             </div>
-
           </div>
 
-          <!-- Trust pills -->
-          <div class="cta-trust">
-            <span class="trust-pill">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-              Calidad Certificada
-            </span>
-            <span class="trust-pill">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-              Garantía Extendida
-            </span>
-            <span class="trust-pill">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Atención Personalizada
-            </span>
-          </div>
         </div>
 
-        <!-- Right: buttons -->
-        <div class="cta-actions">
-          <a href="/contacto" class="btn btn-primary">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-            Contactar Ahora
-            <svg class="btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-            </svg>
-          </a>
+        <!-- Right / Bottom: card con beneficios + botones -->
+        <div class="cta-card">
 
-          <a href="tel:+5491141234567" class="btn btn-ghost">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" style="color: var(--gold-light);">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-            </svg>
-            Llamar Ahora
-          </a>
+          <p class="cta-card-title">¿Qué incluye nuestro servicio?</p>
+
+          <ul class="cta-checklist">
+            <li>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Diagnóstico técnico en sitio
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Presupuesto detallado sin cargo
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Mantenimiento preventivo y correctivo
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Garantía sobre cada intervención
+            </li>
+          </ul>
+
+          <div class="cta-actions">
+            <a href="/contacto" class="btn btn-primary">
+              Solicitar Presupuesto
+              <svg class="btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </a>
+            <a href="/servicios" class="btn btn-ghost">
+              Ver todos los servicios
+            </a>
+          </div>
+
         </div>
 
       </div>
